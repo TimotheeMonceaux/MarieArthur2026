@@ -1,11 +1,33 @@
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@import "tailwindcss";
+
+@theme {
+  /* --- Palette Agrumes d'Été --- */
+  
+  /* Jaune Citron */
+  --color-citrus-yellow: #fde047;
+  --color-citrus-bright: #facc15;
+
+  /* Orange Sanguine */
+  --color-citrus-orange: #fb923c;
+  --color-citrus-deep: #ea580c;
+
+  /* Pamplemousse Rose */
+  --color-citrus-pink: #fda4af;
+  --color-citrus-punch: #f43f5e;
+
+  /* Lime / Citron Vert */
+  --color-citrus-lime: #a3e635;
+  --color-citrus-green: #65a30d;
+
+  /* --- Variables de Design --- */
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
 }
 
-img {
-  width: 100%;
+/* Styles globaux optionnels */
+body {
+  @apply bg-orange-50 text-slate-900;
+  min-height: 100vh;
 }
