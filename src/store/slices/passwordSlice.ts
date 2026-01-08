@@ -1,11 +1,13 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 export interface PasswordState {
-    profile: undefined | 'GUEST_ALL' | 'GUEST_DRINKS'
+    profile: undefined | 'GUEST_ALL' | 'GUEST_DRINKS',
+    hasError: boolean
 }
 
 const initialState: PasswordState = {
-    profile: undefined
+    profile: undefined,
+    hasError: false
 }
 
 export const passwordSlice = createSlice({
@@ -13,10 +15,17 @@ export const passwordSlice = createSlice({
   initialState,
   reducers: {
     checkPassword: (state, pwd: PayloadAction<string>) => {
-        if (pwd.payload === 'ALL INCLUSIVE') 
-            state.profile = 'GUEST_ALL';
-        else if (pwd.payload === 'CIAO BYE')
+        if (pwd.payload.toUpperCase() === 'ERREUR')  {
+            state.hasError = true;
+        }
+        else if (pwd.payload.toUpperCase() === 'CIAO BYE') {
+            state.hasError = false;
             state.profile = 'GUEST_DRINKS';
+        }
+        else {
+            state.profile = 'GUEST_ALL';
+            state.hasError = false;
+        }
     }
   }
 });

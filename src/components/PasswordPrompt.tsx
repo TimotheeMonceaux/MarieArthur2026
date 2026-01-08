@@ -1,11 +1,17 @@
-import { useAppDispatch } from '../store/store'; 
+import { useAppDispatch, useAppSelector } from '../store/store'; 
 import { checkPassword } from '../store/slices/passwordSlice';
 import { useState } from 'react';
 
 function PasswordPrompt() {
-    const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch();  
+    const hasError = useAppSelector((state) => state.passwordSlice.hasError);
+    
     const [inputValue, setInputValue] = useState<string>();
-    const handleSubmit = () => dispatch(checkPassword(inputValue ?? ''));
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault(); // Added to prevent page refresh on submit
+      dispatch(checkPassword(inputValue ?? ''));
+    };
+
     return <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-citrus-pink to-citrus-orange p-4">
       <div
         className="
@@ -38,6 +44,12 @@ function PasswordPrompt() {
               required
             />
           </div>
+          {hasError && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded relative text-sm animate-pulse">
+                <strong className="font-bold">Aïe aïe aïe ! </strong>
+                <span className="block sm:inline">Mot de passe incorrect. Merci de réessayer.</span>
+              </div>
+            )}
 
           <button
             type="submit"
