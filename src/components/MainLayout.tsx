@@ -54,7 +54,7 @@ const MainLayout = () => {
           <React.Fragment key={index}>
             {/* Content Card Section */}
             <div 
-              ref={(el) => (sectionRefs.current[index] = el)}
+              ref={(el) => {sectionRefs.current[index] = el}}
               className="min-h-screen flex items-center justify-center p-6 md:p-12"
             >
               <div className="
