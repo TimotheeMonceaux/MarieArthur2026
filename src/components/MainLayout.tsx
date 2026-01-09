@@ -6,6 +6,14 @@ import photo_exterieur from '../assets/photo_exterieur.jpg';
 import photo_repas from '../assets/photo_repas.jpg';
 import photo_lieu2 from '../assets/photo_lieu2.jpg';
 import photo_amour from '../assets/photo_amour.jpg';
+import HomeSection from './sections/HomeSection';
+import InfoSection from './sections/InfoSection';
+import FormSection from './sections/FormSection';
+import AccomodationSection from './sections/AccomodationSection';
+import ListSection from './sections/ListSection';
+import PhotosSection from './sections/PhotosSection';
+import SongsSection from './sections/SongsSection';
+import QuestionsSection from './sections/QuestionsSection';
 
 const photos = [photo_mariearthur, photo_eglise, photo_lieu, photo_exterieur, photo_repas, photo_lieu2, photo_amour];
 
@@ -14,15 +22,14 @@ const MainLayout = () => {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const sections = [
-    { title: "Notre Histoire", content: "De notre rencontre à aujourd'hui..." },
-    { title: "Informations pratiques", content: "Rendez-vous à la mairie à 15h." },
-    { title: "Formulaire de réponse", content: "RSVP avant le" },
-    { title: "Hébergements", content: "Liste des hôtels et gîtes à proximité." },
-    { title: "Liste de mariage", content: "Pourquoi vous avez besoin d'un lit parapluie et d'une veilleuse ?" },
-    { title: "Les photos", content: "Confirmez votre présence avant juin." },
-    { title: "Les chants", content: "A la pêche aux moules moules moules" },
-    { title: "FAQ", content: "Dress code : Haut choc bas choc." },
-
+    { title: "Notre histoire", content: <HomeSection /> },
+    { title: "Informations pratiques", content: <InfoSection /> },
+    { title: "Formulaire de réponse", content: <FormSection /> },
+    { title: "Hébergements", content: <AccomodationSection /> },
+    { title: "Liste de mariage", content: <ListSection /> },
+    { title: "Les photos", content: <PhotosSection /> },
+    { title: "Les chants", content: <SongsSection /> },
+    { title: "FAQ", content: <QuestionsSection /> },
   ];
 
   const scrollToSection = (index: number) => {
