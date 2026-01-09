@@ -23,7 +23,7 @@ const MainLayout = () => {
 
   const sections = [
     { title: "Notre histoire", content: <HomeSection /> },
-    { title: "Informations pratiques", content: <InfoSection /> },
+    { title: "Informations pratiques", content: <InfoSection scrollToSongs={() => scrollToSection(6)}/> },
     { title: "Formulaire de réponse", content: <FormSection /> },
     { title: "Hébergements", content: <AccomodationSection /> },
     { title: "Liste de mariage", content: <ListSection /> },

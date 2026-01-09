@@ -43,7 +43,7 @@ const HomeSection = () => {
         </p>
         <p className="text-slate-700 font-medium">
           Nous sommes heureux de vous inviter pour notre mariage 
-          que nous célébrerons le <span className="text-pink-600">6 juin 2026</span> à l'église Saint-Martin de Saint-Quentin.
+          que nous célébrerons le <span className="text-citrus-deep">6 juin 2026</span> à l'église Saint-Martin de Saint-Quentin.
         </p>
       </div>
 
