@@ -1,4 +1,3 @@
-import React from 'react';
 import { Camera, Image as ImageIcon, Sparkles, ExternalLink, Clapperboard } from 'lucide-react';
 
 const PhotosSection = () => {

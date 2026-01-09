@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const HomeSection = () => {
   // Date cible : 6 juin 2026 à 15h00

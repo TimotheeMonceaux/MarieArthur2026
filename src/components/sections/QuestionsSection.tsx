@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { HelpCircle, ChevronDown, MessageCircleQuestion } from 'lucide-react';
+import { useState } from 'react';
+import { ChevronDown, MessageCircleQuestion } from 'lucide-react';
 
 const QuestionsSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

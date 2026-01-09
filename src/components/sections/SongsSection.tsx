@@ -1,5 +1,4 @@
-import React from 'react';
-import { Music, Mic2, Youtube, FileText, Sparkles, Volume2 } from 'lucide-react';
+import { Mic2, Youtube, FileText } from 'lucide-react';
 
 const SongsSection = () => {
   // Liens à remplir (Google Doc ou Playlist YouTube)
