@@ -15,16 +15,17 @@ export const passwordSlice = createSlice({
   initialState,
   reducers: {
     checkPassword: (state, pwd: PayloadAction<string>) => {
-        if (pwd.payload.toUpperCase() === 'ERREUR')  {
-            state.hasError = true;
+        let inputHash = await strHash(pwd.payload.toUpperCase());
+        if (inputHash === '5e34bc124001e6287d86e3f7abbf7c02a64be4a77de461eb01c2580c77f5aa69')  {
+            state.hasError = false;
+            state.profile = 'GUEST_ALL';
         }
-        else if (pwd.payload.toUpperCase() === 'CIAO BYE') {
+        else if (inputHash === '21287151c6ad7b6d036ca6f7b6f0965eaf3f9440202b88f9dd5a79313e4a96d2') {
             state.hasError = false;
             state.profile = 'GUEST_DRINKS';
         }
         else {
-            state.profile = 'GUEST_ALL';
-            state.hasError = false;
+            state.hasError = true;
         }
     }
   }
