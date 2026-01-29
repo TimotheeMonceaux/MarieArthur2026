@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 @theme {
+  /* --- Palette du Faire-part --- */
+  --color-off-white: #fefaf2;
+  --color-light-blue: #b8d7d6;
+  --color-dresscode-orange: #fa6f4b;
+  --color-dresscode-yellow: #ffc600;
+  --color-dresscode-blue: #319ecf;
+  --color-dresscode-darkgreen: #1a8373;
+  --color-dresscode-green: #aec465;
+  
   /* --- Palette Agrumes d'Été --- */
   
   /* Jaune Citron */
