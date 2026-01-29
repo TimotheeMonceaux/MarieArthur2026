@@ -47,7 +47,7 @@ const ListSection = () => {
           <div className="space-y-4 py-4">
             <div className="flex justify-center gap-2 text-citrus-pink">
               <Sparkles size={20} className="animate-pulse" />
-              <span className="font-bold uppercase tracking-widest text-sm">Bientôt disponible</span>
+              <span className="font-bold uppercase tracking-widest text-sm">Bientôt disponible !</span>
               <Sparkles size={20} className="animate-pulse" />
             </div>
             <p className="text-slate-400 text-sm italic">
