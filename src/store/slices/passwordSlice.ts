@@ -10,17 +10,27 @@ const initialState: PasswordState = {
     hasError: false
 }
 
+const strHash = (str: string) => {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash |= 0; // Convertit en entier 32 bits
+  }
+  return hash.toString();
+};
+
 export const passwordSlice = createSlice({
   name: 'password',
   initialState,
   reducers: {
     checkPassword: (state, pwd: PayloadAction<string>) => {
-        let inputHash = await strHash(pwd.payload.toUpperCase());
-        if (inputHash === '5e34bc124001e6287d86e3f7abbf7c02a64be4a77de461eb01c2580c77f5aa69')  {
+        let inputHash = strHash(pwd.payload.toUpperCase());
+        if (inputHash === '-925831426')  {
             state.hasError = false;
             state.profile = 'GUEST_ALL';
         }
-        else if (inputHash === '21287151c6ad7b6d036ca6f7b6f0965eaf3f9440202b88f9dd5a79313e4a96d2') {
+        else if (inputHash === '1353680074') {
             state.hasError = false;
             state.profile = 'GUEST_DRINKS';
         }
