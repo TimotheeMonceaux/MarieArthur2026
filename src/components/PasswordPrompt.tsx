@@ -7,7 +7,7 @@ function PasswordPrompt() {
     const hasError = useAppSelector((state) => state.passwordSlice.hasError);
     
     const [inputValue, setInputValue] = useState<string>();
-    const handleSubmit = (e:Event) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       dispatch(checkPassword(inputValue ?? ''));
     };
