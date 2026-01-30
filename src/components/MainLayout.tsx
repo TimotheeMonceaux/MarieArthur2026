@@ -56,7 +56,7 @@ const MainLayout = () => {
       </nav>
 
       {/* --- Main Content --- */}
-      <main className="bg-gradient-to-br from-citrus-pink to-citrus-orange p-4">
+      <main className="bg-linear-to-br from-citrus-pink to-citrus-orange p-4">
         {sections.map((section, index) => (
           <React.Fragment key={index}>
             {/* Content Card Section */}

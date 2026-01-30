@@ -13,7 +13,7 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
       
       {/* --- 1. CÉRÉMONIE --- */}
       <section className="relative pl-8 pb-12 border-l-2 border-citrus-bright">
-        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-citrus-bright shadow-[0_0_10px_rgba(250,204,21,0.5)]" />
+        <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-citrus-bright shadow-[0_0_10px_rgba(250,204,21,0.5)]" />
         
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
           <div>
@@ -41,7 +41,7 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
 
       {/* --- 2. VIN D'HONNEUR --- */}
       <section className={`relative pl-8 border-l-2 border-citrus-lime ${isInvitedToDinner ? 'pb-12' : 'pb-0'}`}>
-        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-citrus-lime shadow-[0_0_10px_rgba(163,230,53,0.5)]" />
+        <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-citrus-lime shadow-[0_0_10px_rgba(163,230,53,0.5)]" />
         
         <div className="flex items-center gap-3 mb-1">
           <h3 className="text-2xl font-bold text-citrus-green uppercase tracking-wide">16h30 — Vin d’honneur</h3>
@@ -57,7 +57,7 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-2xl shadow-inner border-2 border-white bg-slate-100 h-[200px]">
+          <div className="overflow-hidden rounded-2xl shadow-inner border-2 border-white bg-slate-100 h-50">
             <iframe
               title="Carte Domaine de Foreste"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130585.9832635293!2d2.990542296965113!3d49.81491734264966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e80f6c4a7b0f5f%3A0x41c9c51808c1b4c1!2sDomaine%20de%20Foreste!5e0!3m2!1sfr!2sfr!4v1767973603663!5m2!1sfr!2sfr"
@@ -75,7 +75,7 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
       {isInvitedToDinner && (
         <>
           <section className="relative pl-8 pb-12 border-l-2 border-citrus-orange">
-            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-citrus-orange shadow-[0_0_10px_rgba(251,146,60,0.5)]" />
+            <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-citrus-orange shadow-[0_0_10px_rgba(251,146,60,0.5)]" />
             
             <div className="flex items-center gap-3 mb-1">
               <h3 className="text-2xl font-bold text-citrus-deep uppercase tracking-wide">19h30 — Dîner</h3>
@@ -90,9 +90,9 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
           {/* --- 4. BRUNCH (Conditionnel) --- */}
           <section className="relative pl-8 border-l-2 border-transparent">
             {/* Dégradé pour finir la ligne proprement */}
-            <div className="absolute -left-[2px] -top-12 bottom-0 w-[2px] bg-gradient-to-b from-citrus-orange to-transparent" />
+            <div className="absolute -left-0.5 -top-12 bottom-0 w-0.5 bg-linear-to-b from-citrus-orange to-transparent" />
             
-            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-citrus-bright shadow-[0_0_10px_rgba(250,204,21,0.5)]" />
+            <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-citrus-bright shadow-[0_0_10px_rgba(250,204,21,0.5)]" />
             
             <div className="flex items-center gap-3 mb-1">
               <h3 className="text-2xl font-bold text-citrus-deep uppercase tracking-wide">Dimanche 11h30 — Brunch</h3>

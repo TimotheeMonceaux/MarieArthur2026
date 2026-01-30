@@ -9,7 +9,7 @@ function PasswordPrompt() {
     const [inputValue, setInputValue] = useState<string>();
     const handleSubmit = () => dispatch(checkPassword(inputValue ?? ''));
 
-    return <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-citrus-pink to-citrus-orange p-4">
+    return <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-citrus-pink to-citrus-orange p-4">
       <div
         className="
           bg-white p-8 sm:p-10 rounded-2xl md:rounded-3xl shadow-2xl
