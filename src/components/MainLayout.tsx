@@ -14,18 +14,23 @@ import ListSection from './sections/ListSection';
 import PhotosSection from './sections/PhotosSection';
 import SongsSection from './sections/SongsSection';
 import QuestionsSection from './sections/QuestionsSection';
+import { useAppSelector } from '../store/store';
 
-const photos = [photo_mariearthur, photo_eglise, photo_lieu, photo_exterieur, photo_repas, photo_lieu2, photo_amour];
 
 const MainLayout = () => {
+  const profile = useAppSelector(state => state.passwordSlice.profile);
+  const isInvitedToDinner = profile === "GUEST_ALL";
   // Create an array of refs to target each section
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+
+  const photos = [photo_mariearthur, photo_eglise, photo_lieu, photo_exterieur, ...(isInvitedToDinner ? [photo_repas] : []), photo_lieu2, photo_amour];
 
   const sections = [
     { title: "Bienvenue", content: <HomeSection /> },
     { title: "Informations pratiques", content: <InfoSection scrollToSongs={() => scrollToSection(6)}/> },
     { title: "Formulaire de réponse", content: <FormSection /> },
-    { title: "Hébergements", content: <AccomodationSection /> },
+    ...(isInvitedToDinner ? [{ title: "Hébergements", content: <AccomodationSection /> }] : []),
     { title: "Liste de mariage", content: <ListSection /> },
     { title: "Les photos", content: <PhotosSection /> },
     { title: "Les chants", content: <SongsSection /> },
