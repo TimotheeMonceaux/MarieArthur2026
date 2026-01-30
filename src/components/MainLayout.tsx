@@ -22,7 +22,7 @@ const MainLayout = () => {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const sections = [
-    { title: "Notre histoire", content: <HomeSection /> },
+    { title: "Bienvenue", content: <HomeSection /> },
     { title: "Informations pratiques", content: <InfoSection scrollToSongs={() => scrollToSection(6)}/> },
     { title: "Formulaire de réponse", content: <FormSection /> },
     { title: "Hébergements", content: <AccomodationSection /> },
@@ -69,9 +69,11 @@ const MainLayout = () => {
                 max-w-4xl w-full border-t-8 border-citrus-bright
                 transform transition-transform hover:scale-[1.01]
               ">
-                <h2 className="text-4xl font-extrabold text-citrus-deep mb-6">
-                  {section.title}
-                </h2>
+                <div className="flex justify-center">
+                  <h2 className="text-4xl font-extrabold text-citrus-deep mb-6">
+                    {section.title}
+                  </h2>
+                </div>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   {section.content}
                 </p>

@@ -18,11 +18,8 @@ const ListSection = () => {
       {/* Texte d'introduction */}
       <div className="space-y-4">
         <h2 className="text-3xl font-bold text-slate-800 uppercase tracking-tight">Liste de Mariage</h2>
-        <p className="text-slate-600 leading-relaxed italic font-serif text-lg">
-          "Votre présence à nos côtés est le plus beau des cadeaux..."
-        </p>
         <p className="text-slate-700 max-w-md mx-auto">
-          Si vous souhaitez néanmoins nous accompagner dans la réalisation de nos futurs projets et de notre voyage de noces, 
+          Si vous souhaitez nous accompagner dans la réalisation de nos futurs projets et de notre voyage de noces, 
           une liste de mariage en ligne est à votre disposition.
         </p>
       </div>

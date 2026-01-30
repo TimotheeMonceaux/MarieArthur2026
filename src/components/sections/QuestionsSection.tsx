@@ -8,15 +8,15 @@ const QuestionsSection = () => {
   const faqs = [
     {
       question: "Quelle est la date limite pour confirmer ma présence ?",
-      answer: "Nous vous remercions de nous donner une réponse avant le 1er avril 2026 via le formulaire dédié sur ce site."
+      answer: "Nous vous remercions de nous donner une réponse avant le 31 mars 2026 via le formulaire dédié sur ce site."
     },
     {
       question: "Y a-t-il un code vestimentaire (Dress Code) ?",
-      answer: "Pas de thème imposé, venez comme vous êtes ! Une tenue de cocktail élégante sera parfaite. Petit clin d'œil : le thème du mariage étant 'Agrumes d'été', n'hésitez pas à porter une touche de couleur si vous le souhaitez."
+      answer: "Pas de thème imposé, une tenue élégante et dans laquelle vous vous sentez bien sera parfaite. N'hésitez pas à choisir des tenues colorées pour plus de pep's !"
     },
     {
       question: "Les enfants sont-ils les bienvenus ?",
-      answer: "Oui, les enfants sont les bienvenus ! Précisez bien leur présence et leur âge dans le formulaire pour que nous puissions prévoir les menus et les animations adaptés."
+      answer: "Oui, les enfants sont les bienvenus ! Précisez bien leur présence et leur âge dans le formulaire pour que nous puissions prévoir des menus enfants si besoin. Notez cependant qu'il n'y aura pas de service de baby-sitting sur place."
     },
     {
       question: "Où pouvons-nous garer nos voitures au domaine ?",

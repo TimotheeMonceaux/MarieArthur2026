@@ -7,7 +7,10 @@ function PasswordPrompt() {
     const hasError = useAppSelector((state) => state.passwordSlice.hasError);
     
     const [inputValue, setInputValue] = useState<string>();
-    const handleSubmit = () => dispatch(checkPassword(inputValue ?? ''));
+    const handleSubmit = (e:Event) => {
+      e.preventDefault();
+      dispatch(checkPassword(inputValue ?? ''));
+    };
 
     return <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-citrus-pink to-citrus-orange p-4">
       <div

@@ -22,7 +22,7 @@ const SongsSection = () => {
             Chanter ensemble
           </h2>
           <p className="text-slate-700 leading-relaxed text-lg px-4">
-            Nous avons réuni ici les chants que nous avons choisi pour notre célébration à la messe. 
+            Nous avons réuni ici les chants que nous avons choisi pour notre célébration à l'église. 
             Nous vous invitons à les découvrir, et pourquoi pas à vous entraîner à les chanter. 
             <span className="text-citrus-punch font-semibold"> Plus vos voix seront fortes, plus le moment sera joyeux !</span>
           </p>

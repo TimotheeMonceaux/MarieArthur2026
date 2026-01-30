@@ -7,8 +7,8 @@ const FormSection = () => {
 
   // Remplace ces liens par tes vrais liens Google Forms
   const googleFormUrl = isInvitedToDinner 
-    ? "https://forms.gle/ton-lien-formulaire-complet" 
-    : "https://forms.gle/ton-lien-formulaire-vin-d-honneur";
+    ? "https://docs.google.com/forms/d/e/1FAIpQLSdVipG-2HvqpEmtpnnlApSHeoQCM7FDbZNKPGzPZxHCkAmqag/viewform?usp=dialog" 
+    : "https://docs.google.com/forms/d/e/1FAIpQLSck6ymW7X24KUhXE6W8nLU3eCwOTEhTMLFSexqsI1jy3I9n0A/viewform?usp=dialog";
 
   return (
     <div className="space-y-8 p-4 md:p-8 max-w-xl mx-auto text-center">
@@ -66,7 +66,7 @@ const FormSection = () => {
       {/* Rappel date limite */}
       <div className="pt-4">
         <p className="inline-block px-4 py-1 bg-citrus-pink/10 text-citrus-punch rounded-full text-xs font-bold uppercase tracking-widest">
-          Réponse souhaitée avant le 1er Avril 2026
+          Réponse souhaitée avant le 31 mars
         </p>
       </div>
     </div>
