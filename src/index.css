@@ -53,6 +53,6 @@
 
 /* Styles globaux optionnels */
 body {
-  @apply bg-orange-50 text-slate-900;
+  background-color: #54B2DA;
   min-height: 100vh;
 }
