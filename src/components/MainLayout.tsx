@@ -44,14 +44,14 @@ const MainLayout = () => {
   return (
     <div className="relative">
       {/* --- Sticky Navigation Bar --- */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-citrus-pink/30 shadow-sm">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-off-white backdrop-blur-md border-b border-dresscode-orange/30 shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex overflow-x-auto no-scrollbar py-4 gap-6 md:justify-center items-center">
             {sections.map((section, index) => (
               <button
                 key={index}
                 onClick={() => scrollToSection(index)}
-                className="whitespace-nowrap text-sm font-bold text-citrus-deep hover:text-citrus-orange transition-colors cursor-pointer uppercase tracking-tighter"
+                className="whitespace-nowrap text-sm font-bold text-dresscode-orange hover:text-dresscode-yellow transition-colors cursor-pointer uppercase tracking-tighter"
               >
                 {section.title}
               </button>
@@ -61,7 +61,7 @@ const MainLayout = () => {
       </nav>
 
       {/* --- Main Content --- */}
-      <main className="bg-linear-to-br from-citrus-pink to-citrus-orange p-4">
+      <main className="bg-linear-to-br from-light-blue to-dresscode-blue-light p-4">
         {sections.map((section, index) => (
           <React.Fragment key={index}>
             {/* Content Card Section */}
@@ -70,12 +70,12 @@ const MainLayout = () => {
               className="min-h-screen flex items-center justify-center p-6 md:p-12"
             >
               <div className="
-                bg-white p-10 md:p-16 rounded-2xl shadow-xl 
-                max-w-4xl w-full border-t-8 border-citrus-bright
+                bg-off-white p-10 md:p-16 rounded-2xl shadow-xl 
+                max-w-4xl w-full border-t-8 border-dresscode-yellow
                 transform transition-transform hover:scale-[1.01]
               ">
                 <div className="flex justify-center">
-                  <h2 className="text-4xl font-extrabold text-citrus-deep mb-6">
+                  <h2 className="text-4xl font-extrabold text-dresscode-orange mb-6">
                     {section.title}
                   </h2>
                 </div>
@@ -97,7 +97,7 @@ const MainLayout = () => {
       </main>
 
       {/* --- Footer --- */}
-      <footer className="bg-citrus-deep py-8 text-center text-white">
+      <footer className="bg-dresscode-blue py-8 text-center text-white">
         <p className="font-sans">06 Juin 2026 • On a hâte de vous voir !</p>
       </footer>
     </div>

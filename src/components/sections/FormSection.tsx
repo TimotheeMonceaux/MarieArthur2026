@@ -15,32 +15,32 @@ const FormSection = () => {
       
       {/* Icône et Titre */}
       <div className="space-y-3">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-citrus-yellow/20 text-citrus-deep mb-2">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/20 text-dresscode-orange mb-2">
           <ClipboardCheck size={32} />
         </div>
         <h2 className="text-3xl font-bold text-slate-800 uppercase tracking-tight">Confirmation</h2>
         <p className="text-slate-600 leading-relaxed">
           Afin de nous aider à organiser au mieux cette journée, merci de remplir 
-          <span className="text-citrus-orange font-bold"> un formulaire par personne</span>.
+          <span className="text-dresscode-orange-light font-bold"> un formulaire par personne</span>.
         </p>
       </div>
 
       {/* Carte d'appel à l'action */}
-      <div className="bg-white rounded-[2rem] p-8 shadow-xl shadow-citrus-orange/10 border border-slate-100 relative overflow-hidden">
+      <div className="bg-white rounded-[2rem] p-8 shadow-xl shadow-dresscode-orange/10 border border-slate-100 relative overflow-hidden">
         {/* Décoration subtile en arrière-plan */}
-        <div className="absolute -right-4 -top-4 w-24 h-24 bg-citrus-yellow/10 rounded-full blur-2xl" />
+        <div className="absolute -right-4 -top-4 w-24 h-24 bg-dresscode-yellow/10 rounded-full blur-2xl" />
         
         <div className="relative z-10 space-y-6">
           <div className="flex flex-col items-center gap-2">
             {isInvitedToDinner ? (
               <>
-                <Utensils className="text-citrus-orange" size={24} />
-                <span className="text-xs font-bold uppercase tracking-widest text-citrus-orange">Invitation Complète</span>
+                <Utensils className="text-dresscode-orange" size={24} />
+                <span className="text-xs font-bold uppercase tracking-widest text-dresscode-orange">Invitation Complète</span>
               </>
             ) : (
               <>
-                <GlassWater className="text-citrus-lime" size={24} />
-                <span className="text-xs font-bold uppercase tracking-widest text-citrus-green">Invitation Vin d'Honneur</span>
+                <GlassWater className="text-dresscode-green" size={24} />
+                <span className="text-xs font-bold uppercase tracking-widest text-dresscode-green">Invitation Vin d'Honneur</span>
               </>
             )}
           </div>
@@ -53,8 +53,8 @@ const FormSection = () => {
             href={googleFormUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group w-full py-4 px-6 rounded-2xl font-bold text-white shadow-lg transition-all hover:scale-[1.03] active:scale-95 flex items-center justify-center gap-3 ${
-              isInvitedToDinner ? "bg-citrus-deep shadow-citrus-deep/30" : "bg-citrus-green shadow-citrus-green/30"
+            className={`group w-full py-4 px-6 rounded-2xl font-bold text-off-white shadow-lg transition-all hover:scale-[1.03] active:scale-95 flex items-center justify-center gap-3 ${
+              isInvitedToDinner ? "bg-dresscode-orange shadow-dresscode-orange/30" : "bg-dresscode-green shadow-dresscode-green/30"
             }`}
           >
             Accéder au formulaire
@@ -65,7 +65,7 @@ const FormSection = () => {
 
       {/* Rappel date limite */}
       <div className="pt-4">
-        <p className="inline-block px-4 py-1 bg-citrus-pink/10 text-citrus-punch rounded-full text-xs font-bold uppercase tracking-widest">
+        <p className="inline-block px-4 py-1 bg-dresscode-orange/10 text-dresscode-orange-dark rounded-full text-xs font-bold uppercase tracking-widest">
           Réponse souhaitée avant le 31 mars
         </p>
       </div>

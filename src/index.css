@@ -2,31 +2,47 @@
 
 @theme {
   /* --- Palette du Faire-part --- */
+  --color-off-white-lighter: #FFFFFF;
+  --color-off-white-light: #FFFEFC;
   --color-off-white: #fefaf2;
+  --color-off-white-dark: #D8D0C0;
+  --color-off-white-darker: #B6AA91;
+
+  --color-light-blue-lighter: #FCFEFE;
+  --color-light-blue-light: #E2F0EF;
   --color-light-blue: #b8d7d6;
+  --color-light-blue-dark: #84B4B2;
+  --color-light-blue-darker: #54908E;
+
+  --color-dresscode-orange-lighter: #FFAF9A;
+  --color-dresscode-orange-light: #FF8D6F;
   --color-dresscode-orange: #fa6f4b;
+  --color-dresscode-orange-dark: #EA4B21;
+  --color-dresscode-orange-darker: #B7300D;
+
+  --color-dresscode-yellow-lighter: #FFDC64;
+  --color-dresscode-yellow-light: #FFD339;
   --color-dresscode-yellow: #ffc600;
+  --color-dresscode-yellow-dark: #C69900;
+  --color-dresscode-yellow-darker: #9B7900;
+
+  --color-dresscode-blue-lighter: #81C8E7;
+  --color-dresscode-blue-light: #54B2DA;
   --color-dresscode-blue: #319ecf;
+  --color-dresscode-blue-dark: #0D8CC3;
+  --color-dresscode-blue-darker: #056A95;
+
+  --color-dresscode-darkgreen-lighter: #56A79C;
+  --color-dresscode-darkgreen-light: #338F82;
   --color-dresscode-darkgreen: #1a8373;
+  --color-dresscode-darkgreen-dark: #0D695C;
+  --color-dresscode-darkgreen-darker: #005045;
+
+  --color-dresscode-green-lighter: #ECF7C8;
+  --color-dresscode-green-light: #D8EA9D;
   --color-dresscode-green: #aec465;
-  
-  /* --- Palette Agrumes d'Été --- */
-  
-  /* Jaune Citron */
-  --color-citrus-yellow: #fde047;
-  --color-citrus-bright: #facc15;
-
-  /* Orange Sanguine */
-  --color-citrus-orange: #fb923c;
-  --color-citrus-deep: #ea580c;
-
-  /* Pamplemousse Rose */
-  --color-citrus-pink: #fda4af;
-  --color-citrus-punch: #f43f5e;
-
-  /* Lime / Citron Vert */
-  --color-citrus-lime: #a3e635;
-  --color-citrus-green: #65a30d;
+  --color-dresscode-green-dark: #88A03A;
+  --color-dresscode-green-darker: #637A19;
 
   /* --- Variables de Design --- */
   --font-sans: "Inter", system-ui, sans-serif;

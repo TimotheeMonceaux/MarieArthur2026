@@ -33,7 +33,7 @@ const QuestionsSection = () => {
       
       {/* --- EN-TÊTE --- */}
       <div className="text-center space-y-4">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-citrus-orange/20 text-citrus-deep mb-2">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-orange/20 text-dresscode-orange mb-2">
           <MessageCircleQuestion size={32} />
         </div>
         <h2 className="text-3xl font-bold text-slate-800 uppercase tracking-tight">Questions Fréquentes</h2>
@@ -47,17 +47,17 @@ const QuestionsSection = () => {
         {faqs.map((item, index) => (
           <div 
             key={index}
-            className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all hover:border-citrus-orange/50 shadow-sm"
+            className="group overflow-hidden rounded-2xl border border-slate-200 bg-off-white transition-all hover:border-dresscode-orange/50 shadow-sm"
           >
             <button
               onClick={() => toggleAccordion(index)}
               className="flex w-full items-center justify-between p-5 text-left transition-colors"
             >
-              <span className={`font-bold transition-colors ${openIndex === index ? 'text-citrus-deep' : 'text-slate-700'}`}>
+              <span className={`font-bold transition-colors ${openIndex === index ? 'text-dresscode-orange' : 'text-slate-700'}`}>
                 {item.question}
               </span>
               <ChevronDown 
-                className={`text-slate-400 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-citrus-orange' : ''}`} 
+                className={`text-slate-400 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-dresscode-orange' : ''}`} 
                 size={20} 
               />
             </button>
@@ -76,10 +76,10 @@ const QuestionsSection = () => {
       </div>
 
       {/* --- NOTE FINALE --- */}
-      <div className="bg-citrus-yellow/10 rounded-2xl p-6 text-center border border-citrus-yellow">
+      <div className="bg-dresscode-yellow/10 rounded-2xl p-6 text-center border border-dresscode-yellow">
         <p className="text-sm text-slate-700 font-medium">
           Vous ne trouvez pas votre réponse ? N'hésitez pas à nous contacter directement par mail à : 
-          <a href="mailto:mariearthur2026@gmail.com" className="block text-citrus-deep font-bold hover:underline mt-1">
+          <a href="mailto:mariearthur2026@gmail.com" className="block text-dresscode-orange font-bold hover:underline mt-1">
             mariearthur2026@gmail.com
           </a>
         </p>
