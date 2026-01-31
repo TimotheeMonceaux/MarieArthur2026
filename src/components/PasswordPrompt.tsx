@@ -21,40 +21,44 @@ function PasswordPrompt() {
 
     return (
       <div className="relative min-h-dvh flex items-center justify-center bg-linear-to-br from-light-blue to-dresscode-blue-light p-4 overflow-hidden">
+        {/* Masqué sur mobile, affiché à partir de md (tablette/laptop) */}
         <img 
           src={fresque_haut_2} 
           alt="" 
-          className="absolute top-0 left-0 w-2/10 opacity-80 pointer-events-none"
+          className="hidden md:block absolute top-0 left-0 w-2/10 opacity-80 pointer-events-none"
         />
+        {/* Toujours visible : w-full sur mobile, w-3/5 sur desktop */}
         <img 
           src={fresque_haut} 
           alt="" 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-3/5 opacity-80 pointer-events-none"
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-full md:w-3/5 opacity-80 pointer-events-none"
         />
+        {/* Masqué sur mobile */}
         <img 
           src={fresque_gauche} 
           alt="" 
-          className="absolute top-0 right-0 w-1/5 opacity-80 pointer-events-none"
+          className="hidden md:block absolute top-0 right-0 w-1/5 opacity-80 pointer-events-none"
         />
         <img 
           src={lieux_illustres} 
           alt="" 
           className="absolute bottom-0 left-0 opacity-80 pointer-events-none"
         />
+        {/* Icônes masquées sur mobile */}
         <img 
           src={icone_feuille} 
           alt="" 
-          className="absolute bottom-3/7 left-1/5 opacity-80 pointer-events-none"
+          className="hidden md:block absolute bottom-3/7 left-1/5 opacity-80 pointer-events-none"
         />
         <img 
           src={icone_clementine} 
           alt="" 
-          className="absolute bottom-2/3 left-1/8 opacity-80 pointer-events-none"
+          className="hidden md:block absolute bottom-2/3 left-1/8 opacity-80 pointer-events-none"
         />
         <img 
           src={icone_fleur} 
           alt="" 
-          className="absolute bottom-3/4 left-5/6 opacity-80 pointer-events-none"
+          className="hidden md:block absolute bottom-3/4 left-5/6 opacity-80 pointer-events-none"
         />
 
         <div
