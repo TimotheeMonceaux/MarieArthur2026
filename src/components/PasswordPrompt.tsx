@@ -20,7 +20,7 @@ function PasswordPrompt() {
     };
 
     return (
-      <div className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-light-blue to-dresscode-blue-light p-4 overflow-hidden">
+      <div className="relative min-h-dvh flex items-center justify-center bg-linear-to-br from-light-blue to-dresscode-blue-light p-4 overflow-hidden">
         <img 
           src={fresque_haut_2} 
           alt="" 
