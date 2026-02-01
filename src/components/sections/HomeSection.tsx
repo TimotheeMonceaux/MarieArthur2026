@@ -1,3 +1,4 @@
+import { Heart } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 
 const HomeSection = () => {
@@ -33,7 +34,7 @@ const HomeSection = () => {
   }, [calculateTimeLeft]);
 
   return (
-    <div className="flex flex-col items-center text-center space-y-8 p-6 max-w-2xl mx-auto">
+    <div className="flex flex-col items-center text-center space-y-8 p-6 max-w-2xl mx-auto relative">
       {/* Texte d'accueil */}
       <div className="space-y-4">
         <p className="text-slate-700 font-medium">
@@ -62,6 +63,10 @@ const HomeSection = () => {
           ))}
         </div>
       </div>
+      <Heart 
+          className="absolute -bottom-4 -right-12 text-dresscode-orange-dark/15 -rotate-12" 
+          size={120} 
+        />
     </div>
   );
 };

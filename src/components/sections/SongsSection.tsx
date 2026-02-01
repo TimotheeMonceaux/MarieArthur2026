@@ -10,15 +10,12 @@ const SongsSection = () => {
       
       {/* --- EN-TÊTE ET TEXTE D'ACCUEIL --- */}
       <section className="space-y-6">
-        <div className="relative inline-block">
-          <div className="absolute -inset-1 bg-gradient-to-r from-dresscode-orange-dark to-dresscode-yellow rounded-full blur opacity-30 animate-pulse" />
-          <div className="relative flex items-center justify-center w-20 h-20 rounded-full bg-off-white shadow-lg text-dresscode-orange">
-            <Mic2 size={36} />
-          </div>
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/30 text-dresscode-orange mb-2">
+          <Mic2 size={32} />
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold text-slate-800 uppercase tracking-tight font-sans">
+          <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">
             Chanter ensemble
           </h2>
           <p className="text-slate-700 leading-relaxed text-lg px-4">

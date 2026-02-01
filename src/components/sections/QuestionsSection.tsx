@@ -33,11 +33,11 @@ const QuestionsSection = () => {
       
       {/* --- EN-TÊTE --- */}
       <div className="text-center space-y-4">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-orange/20 text-dresscode-orange mb-2">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/30 text-dresscode-orange mb-2">
           <MessageCircleQuestion size={32} />
         </div>
-        <h2 className="text-3xl font-bold text-slate-800 uppercase tracking-tight">Questions Fréquentes</h2>
-        <p className="text-slate-600 italic">
+        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Questions Fréquentes</h2>
+        <p className="text-slate-600">
           Une petite interrogation ? Vous trouverez sans doute la réponse ici.
         </p>
       </div>

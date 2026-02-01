@@ -8,16 +8,13 @@ const ListSection = () => {
     <div className="space-y-8 p-4 md:p-8 max-w-2xl mx-auto text-center">
       
       {/* Icône animée */}
-      <div className="relative inline-block">
-        <div className="absolute inset-0 animate-ping rounded-full bg-dresscode-orange-dark/20 scale-150 duration-3000" />
-        <div className="relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-linear-to-tr from-dresscode-orange-dark to-dresscode-orange text-off-white shadow-lg">
-          <Gift size={36} />
+      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/30 text-dresscode-orange mb-2">
+          <Gift size={32} />
         </div>
-      </div>
 
       {/* Texte d'introduction */}
       <div className="space-y-4">
-        <h2 className="text-3xl font-bold text-slate-800 uppercase tracking-tight">Liste de Mariage</h2>
+        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Liste de Mariage</h2>
         <p className="text-slate-700 max-w-md mx-auto">
           Si vous souhaitez nous accompagner dans la réalisation de nos futurs projets et de notre voyage de noces, 
           une liste de mariage en ligne est à votre disposition.

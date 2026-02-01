@@ -1,4 +1,4 @@
-import { Music, Navigation, Info, Clock, Utensils, Church, GlassWater, Disc3 } from 'lucide-react';
+import { Music, Navigation, Info, Clock, Utensils, Church, GlassWater, Disc3, InfoIcon } from 'lucide-react';
 import { useAppSelector } from '../../store/store';
 
 interface InfoSectionProps {
@@ -10,9 +10,18 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
 
   return (
     <div className="space-y-0 p-4 md:p-8 max-w-4xl mx-auto">
+      <div className="text-center space-y-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/30 text-dresscode-orange mb-2">
+          <InfoIcon size={32} />
+        </div>
+        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Programme des festivités</h2>
+        <p className="text-slate-600">
+          Vous pourrez trouver ci-dessous le programme de l'événement. N'hésitez pas à revenir vous y réferrer le jour J !
+        </p>
+      </div>
       
       {/* --- 1. CÉRÉMONIE --- */}
-      <section className="relative pl-8 pb-12 border-l-2 border-dresscode-orange">
+      <section className="relative pl-8 pb-12 border-l-2 border-dresscode-orange top-10">
         <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-dresscode-orange shadow-[0_0_5px_var(--colors-dresscode-orange)]" />
         
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
