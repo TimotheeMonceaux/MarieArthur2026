@@ -36,8 +36,8 @@ const MainLayout = () => {
 
   const sections = [
     { title: "Bienvenue", content: <HomeSection /> },
-    { title: "Informations pratiques", content: <InfoSection scrollToSongs={() => scrollToSection(6)}/> },
-    { title: "Formulaire de réponse", content: <FormSection /> },
+    { title: "Infos pratiques", content: <InfoSection scrollToSongs={() => scrollToSection(6)}/> },
+    { title: "Formulaire (RSVP)", content: <FormSection /> },
     ...(isInvitedToDinner ? [{ title: "Hébergements", content: <AccomodationSection /> }] : []),
     { title: "Liste de mariage", content: <ListSection /> },
     { title: "Les photos", content: <PhotosSection /> },
@@ -115,7 +115,7 @@ const MainLayout = () => {
                 <img 
                   src={fresque_gauche} 
                   alt="" 
-                  className="hidden md:block absolute top-6 -left-4 w-1/10 opacity-90 pointer-events-none z-1"
+                  className="hidden md:block absolute top-6 -left-4 opacity-90 pointer-events-none z-1"
                 />
                 <img 
                   src={fresque_haut_droite} 
@@ -145,22 +145,22 @@ const MainLayout = () => {
                 <img 
                   src={icone_orange_ouverte} 
                   alt="" 
-                  className="hidden md:block absolute top-146 left-20 opacity-90 pointer-events-none z-1"
+                  className="hidden md:block absolute top-130 left-20 opacity-90 pointer-events-none z-1"
                 />
               </>}
 
               {/* Content */}
               <div className="
-                bg-off-white p-5 md:p-16 rounded-2xl shadow-xl z-10
+                bg-off-white p-5 md:p-16 rounded-2xl shadow-xl z-10 overflow-hidden
                 max-w-4xl w-full border-t-8 border-dresscode-yellow
                 transform transition-transform hover:scale-[1.01]
               ">
                 <div className="flex justify-center">
-                  <h2 className="text-2xl md:text-4xl mb-4 md:mb-6 font-extrabold text-dresscode-orange">
+                  <h2 className="text-2xl md:text-4xl mb-4 md:mb-6 font-extrabold text-dresscode-orange uppercase">
                     {section.title}
                   </h2>
                 </div>
-                <div className="text-xl text-gray-600 leading-relaxed">
+                <div className="text-lg md:text-xl text-gray-600 leading-relaxed">
                   {section.content}
                 </div>
               </div>

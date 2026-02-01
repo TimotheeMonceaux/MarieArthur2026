@@ -9,7 +9,7 @@ const AccommodationSection = () => {
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/30 text-dresscode-orange mb-2">
           <Hotel size={32} />
         </div>
-        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Où dormir ?</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Où dormir ?</h2>
         <p className="text-slate-700 leading-relaxed max-w-2xl mx-auto">
           Pour ceux qui souhaiteraient dormir proche du lieu de réception, nous vous indiquons à titre d’information 
           quelques hébergements que vous pouvez contacter afin d’y réserver une chambre. 

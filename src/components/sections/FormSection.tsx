@@ -18,7 +18,7 @@ const FormSection = () => {
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/20 text-dresscode-orange mb-2">
           <ClipboardCheck size={32} />
         </div>
-        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Confirmation</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Confirmation</h2>
         <p className="text-slate-600 leading-relaxed">
           Afin de nous aider à organiser au mieux cette journée, merci de remplir 
           <span className="text-dresscode-orange-light font-bold"> un formulaire par personne</span>.

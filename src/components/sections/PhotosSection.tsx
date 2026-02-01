@@ -15,7 +15,7 @@ const PhotosSection = () => {
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/30 text-dresscode-orange mb-2">
           <Camera size={32} />
         </div>
-        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Souvenirs en images</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Souvenirs en images</h2>
         <p className="text-slate-600 max-w-lg mx-auto">
           Revivez chaque instant de notre journée à travers ces souvenirs en images.
         </p>

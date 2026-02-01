@@ -14,7 +14,7 @@ const ListSection = () => {
 
       {/* Texte d'introduction */}
       <div className="space-y-4">
-        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Liste de Mariage</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Liste de Mariage</h2>
         <p className="text-slate-700 max-w-md mx-auto">
           Si vous souhaitez nous accompagner dans la réalisation de nos futurs projets et de notre voyage de noces, 
           une liste de mariage en ligne est à votre disposition.

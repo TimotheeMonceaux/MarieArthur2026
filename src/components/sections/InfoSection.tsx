@@ -14,7 +14,7 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/30 text-dresscode-orange mb-2">
           <InfoIcon size={32} />
         </div>
-        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Programme des festivités</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Programme des festivités</h2>
         <p className="text-slate-600">
           Vous pourrez trouver ci-dessous le programme de l'événement. N'hésitez pas à revenir vous y réferrer le jour J !
         </p>

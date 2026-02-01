@@ -15,7 +15,7 @@ const SongsSection = () => {
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">
+          <h2 className="text-xl md:text-3xl font-bold text-dresscode-orange uppercase tracking-tight">
             Chanter ensemble
           </h2>
           <p className="text-slate-700 leading-relaxed text-lg px-4">

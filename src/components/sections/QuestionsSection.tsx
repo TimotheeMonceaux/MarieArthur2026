@@ -36,7 +36,7 @@ const QuestionsSection = () => {
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-dresscode-yellow/30 text-dresscode-orange mb-2">
           <MessageCircleQuestion size={32} />
         </div>
-        <h2 className="text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Questions Fréquentes</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Questions Fréquentes</h2>
         <p className="text-slate-600">
           Une petite interrogation ? Vous trouverez sans doute la réponse ici.
         </p>
