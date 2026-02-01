@@ -156,7 +156,7 @@ const MainLayout = () => {
                 transform transition-transform hover:scale-[1.01]
               ">
                 <div className="flex justify-center">
-                  <h2 className="ext-2xl md:text-4xl mb-4 md:mb-6 font-extrabold text-dresscode-orange">
+                  <h2 className="text-2xl md:text-4xl mb-4 md:mb-6 font-extrabold text-dresscode-orange">
                     {section.title}
                   </h2>
                 </div>
