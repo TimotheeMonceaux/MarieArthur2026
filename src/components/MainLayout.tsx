@@ -18,9 +18,9 @@ import { useAppSelector } from '../store/store';
 import fresque_gauche from '../assets/fresque_gauche.png';
 import fresque_haut_droite from '../assets/fresque_haut_droite.png';
 import icone_feuille from '../assets/icone_feuille.png';
-import icone_citron from '../assets/icone_citron.png';
-import icone_clementine from '../assets/icone_clementine.png';
-import icone_fleur from '../assets/icone_fleur.png';
+// import icone_citron from '../assets/icone_citron.png';
+// import icone_clementine from '../assets/icone_clementine.png';
+// import icone_fleur from '../assets/icone_fleur.png';
 import icone_orange_ouverte from '../assets/icone_orange_ouverte.png';
 import icone_quartier_orange from '../assets/icone_quartier_orange.png';
 
@@ -108,34 +108,61 @@ const MainLayout = () => {
             {/* Content Card Section */}
             <div 
               ref={(el) => {sectionRefs.current[index] = el}}
-              className="min-h-screen flex items-center justify-center p-6 md:p-12"
+              className="min-h-screen flex items-center justify-center p-3 md:p-12 relative"
             >
               {/* Images section - hidden on mobile*/}
-              {index == 0 && <img 
+              {index == 0 && <>
+                <img 
                   src={fresque_gauche} 
                   alt="" 
-                  className="hidden md:block absolute top-10 left-0 w-1/10 opacity-90 pointer-events-none"
-                />}
-              {index == 0 && <img 
+                  className="hidden md:block absolute top-6 -left-4 w-1/10 opacity-90 pointer-events-none z-1"
+                />
+                <img 
                   src={fresque_haut_droite} 
                   alt="" 
-                  className="hidden md:block absolute top-10 right-0 opacity-90 pointer-events-none"
-                />}
+                  className="hidden md:block absolute top-6 -right-4 opacity-90 pointer-events-none z-1"
+                />
+                <img 
+                  src={icone_feuille} 
+                  alt="" 
+                  className="hidden md:block absolute top-100 right-10 opacity-90 pointer-events-none z-1 rotate-12"
+                />
+                <img 
+                  src={icone_feuille} 
+                  alt="" 
+                  className="hidden md:block absolute top-120 right-30 opacity-90 pointer-events-none z-1 rotate-45"
+                />
+                <img 
+                  src={icone_feuille} 
+                  alt="" 
+                  className="hidden md:block absolute top-140  right-20 opacity-90 pointer-events-none z-1 -rotate-45"
+                />
+                <img 
+                  src={icone_quartier_orange} 
+                  alt="" 
+                  className="hidden md:block absolute top-16 left-30 opacity-90 pointer-events-none z-1"
+                />
+                <img 
+                  src={icone_orange_ouverte} 
+                  alt="" 
+                  className="hidden md:block absolute top-146 left-20 opacity-90 pointer-events-none z-1"
+                />
+              </>}
 
               {/* Content */}
               <div className="
-                bg-off-white p-10 md:p-16 rounded-2xl shadow-xl 
+                bg-off-white p-5 md:p-16 rounded-2xl shadow-xl z-10
                 max-w-4xl w-full border-t-8 border-dresscode-yellow
                 transform transition-transform hover:scale-[1.01]
               ">
                 <div className="flex justify-center">
-                  <h2 className="text-4xl font-extrabold text-dresscode-orange mb-6">
+                  <h2 className="ext-2xl md:text-4xl mb-4 md:mb-6 font-extrabold text-dresscode-orange">
                     {section.title}
                   </h2>
                 </div>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <div className="text-xl text-gray-600 leading-relaxed">
                   {section.content}
-                </p>
+                </div>
               </div>
             </div>
 
