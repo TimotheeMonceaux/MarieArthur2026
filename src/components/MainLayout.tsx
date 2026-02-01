@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import photo_mariearthur from '../assets/photo_mariearthur.jpg';
 import photo_eglise from '../assets/photo_eglise.jpg';
 import photo_lieu from '../assets/photo_lieu.jpg';
@@ -15,14 +15,22 @@ import PhotosSection from './sections/PhotosSection';
 import SongsSection from './sections/SongsSection';
 import QuestionsSection from './sections/QuestionsSection';
 import { useAppSelector } from '../store/store';
+import fresque_gauche from '../assets/fresque_gauche.png';
+import fresque_haut_droite from '../assets/fresque_haut_droite.png';
+import icone_feuille from '../assets/icone_feuille.png';
+import icone_citron from '../assets/icone_citron.png';
+import icone_clementine from '../assets/icone_clementine.png';
+import icone_fleur from '../assets/icone_fleur.png';
+import icone_orange_ouverte from '../assets/icone_orange_ouverte.png';
+import icone_quartier_orange from '../assets/icone_quartier_orange.png';
 
 
 const MainLayout = () => {
   const profile = useAppSelector(state => state.passwordSlice.profile);
   const isInvitedToDinner = profile === "GUEST_ALL";
   // Create an array of refs to target each section
+  const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-
 
   const photos = [photo_mariearthur, photo_eglise, photo_lieu, photo_exterieur, ...(isInvitedToDinner ? [photo_repas] : []), photo_lieu2, photo_amour];
 
@@ -36,6 +44,35 @@ const MainLayout = () => {
     { title: "Les chants", content: <SongsSection /> },
     { title: "FAQ", content: <QuestionsSection /> },
   ];
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-40% 0px -40% 0px', // Triggers when section is roughly in the middle 20% of the screen
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Find the index of the element that is intersecting
+          const index = sectionRefs.current.findIndex((ref) => ref === entry.target);
+          if (index !== -1) {
+            setActiveSection(index);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe each section
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, [sections.length]); // Re-run if the number of sections changes (e.g., guest login)
 
   const scrollToSection = (index: number) => {
     sectionRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });
@@ -51,7 +88,11 @@ const MainLayout = () => {
               <button
                 key={index}
                 onClick={() => scrollToSection(index)}
-                className="whitespace-nowrap text-sm font-bold text-dresscode-orange hover:text-dresscode-yellow transition-colors cursor-pointer uppercase tracking-tighter"
+                className={`whitespace-nowrap text-sm font-bold transition-all duration-300 cursor-pointer uppercase tracking-tighter border-b-2 ${
+                  activeSection === index 
+                    ? "text-dresscode-orange border-dresscode-orange scale-110" 
+                    : "text-dresscode-orange/90 border-transparent hover:text-dresscode-orange"
+                }`}
               >
                 {section.title}
               </button>
@@ -69,6 +110,19 @@ const MainLayout = () => {
               ref={(el) => {sectionRefs.current[index] = el}}
               className="min-h-screen flex items-center justify-center p-6 md:p-12"
             >
+              {/* Images section - hidden on mobile*/}
+              {index == 0 && <img 
+                  src={fresque_gauche} 
+                  alt="" 
+                  className="hidden md:block absolute top-10 left-0 w-1/10 opacity-90 pointer-events-none"
+                />}
+              {index == 0 && <img 
+                  src={fresque_haut_droite} 
+                  alt="" 
+                  className="hidden md:block absolute top-10 right-0 opacity-90 pointer-events-none"
+                />}
+
+              {/* Content */}
               <div className="
                 bg-off-white p-10 md:p-16 rounded-2xl shadow-xl 
                 max-w-4xl w-full border-t-8 border-dresscode-yellow
@@ -88,7 +142,7 @@ const MainLayout = () => {
             {/* Parallax Divider (7 images total) */}
             {index < photos.length && (
               <div 
-                className="h-[50vh] md:h-[80vh] bg-fixed bg-center bg-cover bg-no-repeat shadow-inner"
+                className="parallax-fix h-[50vh] md:h-[80vh] bg-center bg-cover bg-no-repeat shadow-inner"
                 style={{ backgroundImage: `url(${photos[index]})` }}
               />
             )}

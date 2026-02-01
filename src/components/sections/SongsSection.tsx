@@ -80,7 +80,7 @@ const SongsSection = () => {
 
       {/* Petit clin d'oeil visuel */}
       <div className="pt-4 flex items-center justify-center gap-4">
-        <div className="h-[1px] w-12 bg-slate-200" />
+        <div className="h-px w-12 bg-slate-200" />
         <div className="flex gap-1">
           {[...Array(5)].map((_, i) => (
             <div 
@@ -90,7 +90,7 @@ const SongsSection = () => {
             />
           ))}
         </div>
-        <div className="h-[1px] w-12 bg-slate-200" />
+        <div className="h-px w-12 bg-slate-200" />
       </div>
     </div>
   );

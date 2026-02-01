@@ -114,7 +114,7 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
           {/* --- 5. BRUNCH (Conditionnel) --- */}
           <section className="relative pl-8 border-l-2 border-transparent">
             {/* Dégradé pour finir la ligne proprement */}
-            <div className="absolute -left-0.5 -top-0 bottom-0 w-0.5 bg-linear-to-b from-dresscode-blue to-transparent" />
+            <div className="absolute -left-0.5 top-0 bottom-0 w-0.5 bg-linear-to-b from-dresscode-blue to-transparent" />
             
             <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-dresscode-blue shadow-[0_0_5px_var(--colors-dresscode-blue)]" />
             

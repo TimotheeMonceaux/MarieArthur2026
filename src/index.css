@@ -56,3 +56,13 @@ body {
   background-color: #54B2DA;
   min-height: 100vh;
 }
+
+/* Fix for iOS */
+.parallax-fix {
+  background-attachment: scroll; /* Default for mobile */
+}
+@media (min-width: 768px) {
+  .parallax-fix {
+    background-attachment: fixed;
+  }
+}

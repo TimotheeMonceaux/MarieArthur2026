@@ -3,7 +3,7 @@ import { checkPassword } from '../store/slices/passwordSlice';
 import { useState } from 'react';
 import lieux_illustres from '../assets/lieux_illustres.png';
 import fresque_haut from '../assets/fresque_haut.png';
-import fresque_gauche from '../assets/fresque_haut_droite_2.png';
+import fresque_haut_droite_2 from '../assets/fresque_haut_droite_2.png';
 import fresque_haut_2 from '../assets/fresque_haut_2.png';
 import icone_clementine from '../assets/icone_clementine.png';
 import icone_feuille from '../assets/icone_feuille.png';
@@ -35,7 +35,7 @@ function PasswordPrompt() {
         />
         {/* Masqué sur mobile */}
         <img 
-          src={fresque_gauche} 
+          src={fresque_haut_droite_2} 
           alt="" 
           className="hidden md:block absolute top-0 right-0 w-1/5 opacity-80 pointer-events-none"
         />
