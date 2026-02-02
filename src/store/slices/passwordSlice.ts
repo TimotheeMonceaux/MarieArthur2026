@@ -25,7 +25,7 @@ export const passwordSlice = createSlice({
   initialState,
   reducers: {
     checkPassword: (state, pwd: PayloadAction<string>) => {
-        let inputHash = strHash(pwd.payload.toUpperCase());
+        let inputHash = strHash(pwd.payload.replaceAll(" ","").toUpperCase());
         if (inputHash === '-925831426')  {
             state.hasError = false;
             state.profile = 'GUEST_ALL';
