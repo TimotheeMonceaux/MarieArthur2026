@@ -42,6 +42,10 @@ import icone_orange_ouverte from '../assets/webp/icone_orange_ouverte.webp';
 import icone_orange_ouverte_legacy from '../assets/legacy/icone_orange_ouverte.png';
 import icone_quartier_orange from '../assets/webp/icone_quartier_orange.webp';
 import icone_quartier_orange_legacy from '../assets/legacy/icone_quartier_orange.png';
+import fresque_gauche_3 from '../assets/webp/fresque_gauche_3.webp';
+import fresque_gauche_3_legacy from '../assets/legacy/fresque_gauche_3.png';
+import fresque_droite_2 from '../assets/webp/fresque_droite_2.webp';
+import fresque_droite_2_legacy from '../assets/legacy/fresque_droite_2.png';
 
 
 const MainLayout = () => {
@@ -135,7 +139,7 @@ const MainLayout = () => {
             {/* Content Card Section */}
             <div 
               ref={(el) => {sectionRefs.current[index] = el}}
-              className="min-h-screen flex items-center justify-center p-3 md:p-12 relative"
+              className="min-h-screen flex items-center justify-center p-3 md:p-12 relative overflow-hidden"
             >
               {/* Images section - hidden on mobile*/}
               {index == 0 && <>
@@ -225,6 +229,26 @@ const MainLayout = () => {
                 <picture className="hidden md:block absolute top-300 right-2 opacity-90 pointer-events-none z-1 -rotate-70">
                   <source srcSet={icone_fleur} type="image/webp" />
                   <img src={icone_fleur_legacy} alt="" loading="lazy"/>
+                </picture>
+              </>}
+              {index >= 2 && index % 2 == 0 && <>
+                <picture className="hidden md:block absolute top-5 left-0 opacity-90 pointer-events-none z-1">
+                  <source srcSet={fresque_gauche_3} type="image/webp" />
+                  <img src={fresque_gauche_3_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-10 right-0 opacity-90 pointer-events-none z-1">
+                  <source srcSet={fresque_droite_2} type="image/webp" />
+                  <img src={fresque_droite_2_legacy} alt="" loading="lazy"/>
+                </picture>
+              </>}
+              {index >= 2 && index % 2 == 1 && <>
+                <picture className="hidden md:block absolute top-5 right-0 opacity-90 pointer-events-none -scale-x-100 z-1">
+                  <source srcSet={fresque_gauche_3} type="image/webp" />
+                  <img src={fresque_gauche_3_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-10 left-0 opacity-90 pointer-events-none -scale-x-100 z-1">
+                  <source srcSet={fresque_droite_2} type="image/webp" />
+                  <img src={fresque_droite_2_legacy} alt="" loading="lazy"/>
                 </picture>
               </>}
 
