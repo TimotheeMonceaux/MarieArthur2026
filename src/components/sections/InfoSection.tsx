@@ -27,10 +27,10 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
           <div>
             <div className="flex items-center gap-3 mb-1">
-              <h3 className="text-2xl font-bold text-dresscode-orange uppercase tracking-wide font-sans">14h45 — Bénédiction</h3>
+              <h3 className="text-lg md:text-2xl font-bold text-dresscode-orange uppercase tracking-wide font-sans">14h45 — Bénédiction</h3>
               <Church className="text-dresscode-orange" size={24} />
             </div>
-            <p className="text-lg font-medium text-slate-800">Église Saint-Martin, Saint-Quentin</p>
+            <p className="md:text-lg font-medium text-slate-800">Église Saint-Martin, Saint-Quentin</p>
           </div>
           <div 
             onClick={scrollToSongs}
@@ -40,7 +40,7 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
           </div>
         </div>
 
-        <div className="mt-4 flex items-start gap-3 p-4 bg-dresscode-orange/20 rounded-xl border border-dresscode-orange">
+        <div className="mt-4 flex items-start gap-3 p-4 bg-dresscode-orange/20 rounded-xl border border-dresscode-orange mb-10">
           <Info className="text-dresscode-orange shrink-0" size={20} />
           <p className="text-sm text-slate-700 italic">
             <strong>Indication importante :</strong> Des places de parking sont disponibles sur les côtés de l'église et dans les rues avoisinantes. Merci de ne pas vous garer devant le parvis.
@@ -53,10 +53,10 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
         <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-dresscode-yellow shadow-[0_0_5px_var(--colors-dresscode-yellow)]" />
         
         <div className="flex items-center gap-3 mb-1">
-          <h3 className="text-2xl font-bold text-dresscode-yellow uppercase tracking-wide">16h30 — Vin d’honneur</h3>
+          <h3 className="text-lg md:text-2xl font-bold text-dresscode-yellow uppercase tracking-wide">16h30 — Vin d’honneur</h3>
           <GlassWater className="text-dresscode-yellow" size={24} />
         </div>
-        <p className="text-lg font-medium text-slate-800">Domaine de Foreste</p>
+        <p className="md:text-lg font-medium text-slate-800">Domaine de Foreste</p>
 
         <div className="mt-4 space-y-4">
           <div className="flex items-start gap-3 p-4 bg-dresscode-yellow/10 rounded-xl border border-dresscode-yellow/30">
@@ -88,10 +88,10 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
             <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-dresscode-green shadow-[0_0_5px_var(--colors-dresscode-green)]" />
             
             <div className="flex items-center gap-3 mb-1">
-              <h3 className="text-2xl font-bold text-dresscode-green uppercase tracking-wide">19h30 — Dîner</h3>
+              <h3 className="text-lg md:text-2xl font-bold text-dresscode-green uppercase tracking-wide">19h30 — Dîner</h3>
               <Utensils className="text-dresscode-green" size={24} />
             </div>
-            <p className="text-lg font-medium text-slate-800">Domaine de Foreste</p>
+            <p className="md:text-lg font-medium text-slate-800">Domaine de Foreste</p>
             <p className="text-slate-600 mt-2 leading-relaxed">
               Nous avons hâte de partager ce premier banquet avec vous dans la salle du Domaine.
             </p>
@@ -102,10 +102,10 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
             <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-dresscode-darkgreen shadow-[0_0_5px_var(--colors-dresscode-darkgreen)]" />
             
             <div className="flex items-center gap-3 mb-1">
-              <h3 className="text-2xl font-bold text-dresscode-darkgreen uppercase tracking-wide">23h00 — Soirée</h3>
+              <h3 className="text-lg md:text-2xl font-bold text-dresscode-darkgreen uppercase tracking-wide">23h00 — Soirée</h3>
               <Disc3 className="text-dresscode-darkgreen" size={24} />
             </div>
-            <p className="text-lg font-medium text-slate-800">Domaine de Foreste</p>
+            <p className="md:text-lg font-medium text-slate-800">Domaine de Foreste</p>
             <p className="text-slate-600 mt-2 leading-relaxed">
               Montrez nous vos meilleurs moves sur le dancefloor !
             </p>
@@ -119,10 +119,10 @@ const InfoSection = ({ scrollToSongs }: InfoSectionProps) => {
             <div className="absolute -left-2.25 top-0 w-4 h-4 rounded-full bg-dresscode-blue shadow-[0_0_5px_var(--colors-dresscode-blue)]" />
             
             <div className="flex items-center gap-3 mb-1">
-              <h3 className="text-2xl font-bold text-dresscode-blue tracking-wide">DIMANCHE — à partir de 11h30 — BRUNCH</h3>
+              <h3 className="text-lg md:text-2xl font-bold text-dresscode-blue tracking-wide">DIMANCHE — à partir de 11h30 — BRUNCH</h3>
               <Clock className="text-dresscode-blue" size={24} />
             </div>
-            <p className="text-lg font-medium text-slate-800">Domaine de Foreste</p>
+            <p className="md:text-lg font-medium text-slate-800">Domaine de Foreste</p>
             <p className="text-slate-600 mt-2 leading-relaxed">
               Pour débriefer de la veille tout en douceur, pour celles et ceux qui le souhaitent.
             </p>

@@ -143,11 +143,11 @@ const MainLayout = () => {
             >
               {/* Images section - hidden on mobile*/}
               {index == 0 && <>
-                <picture className="hidden md:block absolute top-6 -left-4 opacity-90 pointer-events-none z-1">
+                <picture className="hidden md:block absolute top-6 left-0 opacity-90 pointer-events-none z-1">
                   <source srcSet={fresque_gauche} type="image/webp" />
                   <img src={fresque_gauche_legacy} alt="" loading="lazy"/>
                 </picture>
-                <picture className="hidden md:block absolute top-6 -right-4 opacity-90 pointer-events-none z-1">
+                <picture className="hidden md:block absolute top-6 right-0 opacity-90 pointer-events-none z-1">
                   <source srcSet={fresque_haut_droite} type="image/webp" />
                   <img src={fresque_haut_droite_legacy} alt="" loading="lazy"/>
                 </picture>
@@ -190,7 +190,7 @@ const MainLayout = () => {
                   <source srcSet={icone_quartier_orange} type="image/webp" />
                   <img src={icone_quartier_orange_legacy} alt="" loading="lazy"/>
                 </picture>
-                <picture className="hidden md:block absolute top-50 -left-4 opacity-90 pointer-events-none z-1">
+                <picture className="hidden md:block absolute top-50 left-0 opacity-90 pointer-events-none z-1">
                   <source srcSet={fresque_gauche_2} type="image/webp" />
                   <img src={fresque_gauche_2_legacy} alt="" loading="lazy"/>
                 </picture>
@@ -206,7 +206,7 @@ const MainLayout = () => {
                   <source srcSet={icone_citron} type="image/webp" />
                   <img src={icone_citron_legacy} alt="" loading="lazy"/>
                 </picture>
-                <picture className="hidden md:block absolute top-0 -right-4 opacity-90 pointer-events-none z-1">
+                <picture className="hidden md:block absolute top-0 right-0 opacity-90 pointer-events-none z-1">
                   <source srcSet={fresque_droite} type="image/webp" />
                   <img src={fresque_droite_legacy} alt="" loading="lazy"/>
                 </picture>
@@ -254,7 +254,7 @@ const MainLayout = () => {
 
               {/* Content */}
               <div className="
-                bg-off-white p-5 md:p-16 rounded-2xl shadow-xl z-10 overflow-hidden
+                bg-off-white py-5 md:py-16 px-2 md:px-16 rounded-2xl shadow-xl z-10 overflow-hidden
                 max-w-4xl w-full border-t-8 border-dresscode-yellow
                 transform transition-transform hover:scale-[1.01]
               ">
