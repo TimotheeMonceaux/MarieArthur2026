@@ -57,12 +57,23 @@ body {
   min-height: 100vh;
 }
 
-/* Fix for iOS */
-.parallax-fix {
-  background-attachment: scroll; /* Default for mobile */
+.parallax {
+  background-attachment: scroll;
+  /* On utilise la variable --bg-webp par défaut, et --bg-jpg si non supporté */
+  background-image: var(--bg-jpg); 
 }
+
+@supports (background-image: -webkit-image-set(url(a.webp) type("image/webp"))) {
+  .parallax {
+    background-image: -webkit-image-set(
+      var(--bg-webp) type("image/webp"),
+      var(--bg-legacy) type("image/jpeg")
+    );
+  }
+}
+
 @media (min-width: 768px) {
-  .parallax-fix {
+  .parallax {
     background-attachment: fixed;
   }
 }

@@ -1,17 +1,17 @@
 import React, { useRef, useState, useEffect } from 'react';
-//import photo_mariearthur from '../assets/webp/photo_mariearthur.webp';
+import photo_mariearthur from '../assets/webp/photo_mariearthur.webp';
 import photo_mariearthur_legacy from '../assets/legacy/photo_mariearthur.jpg';
-//import photo_eglise from '../assets/webp/photo_eglise.webp';
+import photo_eglise from '../assets/webp/photo_eglise.webp';
 import photo_eglise_legacy from '../assets/legacy/photo_eglise.jpg';
-//import photo_lieu from '../assets/webp/photo_lieu.webp';
+import photo_lieu from '../assets/webp/photo_lieu.webp';
 import photo_lieu_legacy from '../assets/legacy/photo_lieu.jpg';
-//import photo_exterieur from '../assets/webp/photo_exterieur.webp';
+import photo_exterieur from '../assets/webp/photo_exterieur.webp';
 import photo_exterieur_legacy from '../assets/legacy/photo_exterieur.jpg';
-//import photo_repas from '../assets/webp/photo_repas.webp';
+import photo_repas from '../assets/webp/photo_repas.webp';
 import photo_repas_legacy from '../assets/legacy/photo_repas.jpg';
-//import photo_lieu2 from '../assets/webp/photo_lieu2.webp';
+import photo_lieu2 from '../assets/webp/photo_lieu2.webp';
 import photo_lieu2_legacy from '../assets/legacy/photo_lieu2.jpg';
-//import photo_amour from '../assets/webp/photo_amour.webp';
+import photo_amour from '../assets/webp/photo_amour.webp';
 import photo_amour_legacy from '../assets/legacy/photo_amour.jpg';
 import HomeSection from './sections/HomeSection';
 import InfoSection from './sections/InfoSection';
@@ -51,7 +51,15 @@ const MainLayout = () => {
   const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const photos = [photo_mariearthur_legacy, photo_eglise_legacy, photo_lieu_legacy, photo_exterieur_legacy, ...(isInvitedToDinner ? [photo_repas_legacy] : []), photo_lieu2_legacy, photo_amour_legacy];
+  const photos = [
+    {webp: photo_mariearthur, legacy: photo_mariearthur_legacy},
+    {webp: photo_eglise, legacy: photo_eglise_legacy},
+    {webp: photo_lieu, legacy: photo_lieu_legacy},
+    {webp: photo_exterieur, legacy: photo_exterieur_legacy},
+    ...(isInvitedToDinner ? [{webp: photo_repas, legacy: photo_repas_legacy}] : []), 
+    {webp: photo_lieu2, legacy: photo_lieu2_legacy},
+    {webp: photo_amour, legacy: photo_amour_legacy}
+  ];
 
   const sections = [
     { title: "Bienvenue", content: <HomeSection /> },
@@ -240,8 +248,11 @@ const MainLayout = () => {
             {/* Parallax Divider (7 images total) */}
             {index < photos.length && (
               <div 
-                className="parallax-fix h-[50vh] md:h-[80vh] bg-center bg-cover bg-no-repeat shadow-inner"
-                style={{ backgroundImage: `url(${photos[index]})` }}
+                className="parallax h-[50vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
+                style={{ 
+                  '--bg-webp': `url(${photos[index].webp})`,
+                  '--bg-legacy': `url(${photos[index].legacy})` 
+                } as React.CSSProperties}
               />
             )}
           </React.Fragment>
