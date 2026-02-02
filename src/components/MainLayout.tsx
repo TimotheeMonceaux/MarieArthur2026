@@ -16,10 +16,12 @@ import SongsSection from './sections/SongsSection';
 import QuestionsSection from './sections/QuestionsSection';
 import { useAppSelector } from '../store/store';
 import fresque_gauche from '../assets/fresque_gauche.png';
+import fresque_gauche_2 from '../assets/fresque_gauche_2.png';
+import fresque_droite from '../assets/fresque_droite.png';
 import fresque_haut_droite from '../assets/fresque_haut_droite.png';
 import icone_feuille from '../assets/icone_feuille.png';
 import icone_citron from '../assets/icone_citron.png';
-// import icone_clementine from '../assets/icone_clementine.png';
+import icone_clementine from '../assets/icone_clementine.png';
 import icone_fleur from '../assets/icone_fleur.png';
 import icone_orange_ouverte from '../assets/icone_orange_ouverte.png';
 import icone_quartier_orange from '../assets/icone_quartier_orange.png';
@@ -140,7 +142,7 @@ const MainLayout = () => {
                 <img 
                   src={icone_quartier_orange} 
                   alt="" 
-                  className="hidden md:block absolute top-16 left-30 opacity-90 pointer-events-none z-1"
+                  className="hidden md:block absolute top-16 left-30 opacity-90 pointer-events-none z-1 -rotate-90"
                 />
                 <img 
                   src={icone_orange_ouverte} 
@@ -153,14 +155,72 @@ const MainLayout = () => {
                   className="hidden 2xl:block absolute top-160 left-0 opacity-90 pointer-events-none z-1 rotate-70"
                 />
                 <img 
+                  src={icone_fleur} 
+                  alt="" 
+                  className="hidden 2xl:block absolute top-200 left-15 opacity-90 pointer-events-none z-1"
+                />
+              </>}
+
+              {index == 1 && <>
+                <img 
+                  src={icone_orange_ouverte} 
+                  alt="" 
+                  className="hidden md:block absolute top-10 left-10 opacity-90 pointer-events-none z-1"
+                />
+                <img 
+                  src={icone_quartier_orange} 
+                  alt="" 
+                  className="hidden md:block absolute top-25 left-25 opacity-90 pointer-events-none z-1"
+                />
+                <img 
+                  src={fresque_gauche_2} 
+                  alt="" 
+                  className="hidden md:block absolute top-50 -left-4 opacity-90 pointer-events-none z-1"
+                />
+                <img 
+                  src={icone_clementine} 
+                  alt="" 
+                  className="hidden md:block absolute bottom-25 left-25 opacity-90 pointer-events-none z-1 rotate-12"
+                />
+                <img 
                   src={icone_citron} 
                   alt="" 
-                  className="hidden 2xl:block absolute top-180 left-40 opacity-90 pointer-events-none z-1"
+                  className="hidden md:block absolute bottom-35 left-15 opacity-90 pointer-events-none z-1"
+                />
+                <img 
+                  src={icone_citron} 
+                  alt="" 
+                  className="hidden md:block absolute bottom-15 left-5 opacity-90 pointer-events-none z-1 rotate-45"
+                />
+                <img 
+                  src={fresque_droite} 
+                  alt="" 
+                  className="hidden md:block absolute top-0 -right-4 opacity-90 pointer-events-none z-1"
+                />
+                <img 
+                  src={icone_feuille} 
+                  alt="" 
+                  className="hidden md:block absolute top-250 right-0 opacity-90 pointer-events-none z-1 -rotate-45"
+                />
+                <img 
+                  src={icone_feuille} 
+                  alt="" 
+                  className="hidden md:block absolute top-290 right-20 opacity-90 pointer-events-none z-1 rotate-45"
+                />
+                <img 
+                  src={icone_feuille} 
+                  alt="" 
+                  className="hidden md:block absolute top-320 right-15 opacity-90 pointer-events-none z-1 rotate-12"
                 />
                 <img 
                   src={icone_fleur} 
                   alt="" 
-                  className="hidden 2xl:block absolute top-200 left-15 opacity-90 pointer-events-none z-1"
+                  className="hidden md:block absolute top-275 right-5 opacity-90 pointer-events-none z-1"
+                />
+                <img 
+                  src={icone_fleur} 
+                  alt="" 
+                  className="hidden md:block absolute top-300 right-2 opacity-90 pointer-events-none z-1 -rotate-70"
                 />
               </>}
 
