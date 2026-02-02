@@ -1,11 +1,18 @@
 import React, { useRef, useState, useEffect } from 'react';
-import photo_mariearthur from '../assets/photo_mariearthur.jpg';
-import photo_eglise from '../assets/photo_eglise.jpg';
-import photo_lieu from '../assets/photo_lieu.jpg';
-import photo_exterieur from '../assets/photo_exterieur.jpg';
-import photo_repas from '../assets/photo_repas.jpg';
-import photo_lieu2 from '../assets/photo_lieu2.jpg';
-import photo_amour from '../assets/photo_amour.jpg';
+//import photo_mariearthur from '../assets/webp/photo_mariearthur.webp';
+import photo_mariearthur_legacy from '../assets/legacy/photo_mariearthur.jpg';
+//import photo_eglise from '../assets/webp/photo_eglise.webp';
+import photo_eglise_legacy from '../assets/legacy/photo_eglise.jpg';
+//import photo_lieu from '../assets/webp/photo_lieu.webp';
+import photo_lieu_legacy from '../assets/legacy/photo_lieu.jpg';
+//import photo_exterieur from '../assets/webp/photo_exterieur.webp';
+import photo_exterieur_legacy from '../assets/legacy/photo_exterieur.jpg';
+//import photo_repas from '../assets/webp/photo_repas.webp';
+import photo_repas_legacy from '../assets/legacy/photo_repas.jpg';
+//import photo_lieu2 from '../assets/webp/photo_lieu2.webp';
+import photo_lieu2_legacy from '../assets/legacy/photo_lieu2.jpg';
+//import photo_amour from '../assets/webp/photo_amour.webp';
+import photo_amour_legacy from '../assets/legacy/photo_amour.jpg';
 import HomeSection from './sections/HomeSection';
 import InfoSection from './sections/InfoSection';
 import FormSection from './sections/FormSection';
@@ -15,16 +22,26 @@ import PhotosSection from './sections/PhotosSection';
 import SongsSection from './sections/SongsSection';
 import QuestionsSection from './sections/QuestionsSection';
 import { useAppSelector } from '../store/store';
-import fresque_gauche from '../assets/fresque_gauche.png';
-import fresque_gauche_2 from '../assets/fresque_gauche_2.png';
-import fresque_droite from '../assets/fresque_droite.png';
-import fresque_haut_droite from '../assets/fresque_haut_droite.png';
-import icone_feuille from '../assets/icone_feuille.png';
-import icone_citron from '../assets/icone_citron.png';
-import icone_clementine from '../assets/icone_clementine.png';
-import icone_fleur from '../assets/icone_fleur.png';
-import icone_orange_ouverte from '../assets/icone_orange_ouverte.png';
-import icone_quartier_orange from '../assets/icone_quartier_orange.png';
+import fresque_gauche from '../assets/webp/fresque_gauche.webp';
+import fresque_gauche_legacy from '../assets/legacy/fresque_gauche.png';
+import fresque_gauche_2 from '../assets/webp/fresque_gauche_2.webp';
+import fresque_gauche_2_legacy from '../assets/legacy/fresque_gauche_2.png';
+import fresque_droite from '../assets/webp/fresque_droite.webp';
+import fresque_droite_legacy from '../assets/legacy/fresque_droite.png';
+import fresque_haut_droite from '../assets/webp/fresque_haut_droite.webp';
+import fresque_haut_droite_legacy from '../assets/legacy/fresque_haut_droite.png';
+import icone_feuille from '../assets/webp/icone_feuille.webp';
+import icone_feuille_legacy from '../assets/legacy/icone_feuille.png';
+import icone_citron from '../assets/webp/icone_citron.webp';
+import icone_citron_legacy from '../assets/legacy/icone_citron.png';
+import icone_clementine from '../assets/webp/icone_clementine.webp';
+import icone_clementine_legacy from '../assets/legacy/icone_clementine.png';
+import icone_fleur from '../assets/webp/icone_fleur.webp';
+import icone_fleur_legacy from '../assets/legacy/icone_fleur.png';
+import icone_orange_ouverte from '../assets/webp/icone_orange_ouverte.webp';
+import icone_orange_ouverte_legacy from '../assets/legacy/icone_orange_ouverte.png';
+import icone_quartier_orange from '../assets/webp/icone_quartier_orange.webp';
+import icone_quartier_orange_legacy from '../assets/legacy/icone_quartier_orange.png';
 
 
 const MainLayout = () => {
@@ -34,7 +51,7 @@ const MainLayout = () => {
   const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const photos = [photo_mariearthur, photo_eglise, photo_lieu, photo_exterieur, ...(isInvitedToDinner ? [photo_repas] : []), photo_lieu2, photo_amour];
+  const photos = [photo_mariearthur_legacy, photo_eglise_legacy, photo_lieu_legacy, photo_exterieur_legacy, ...(isInvitedToDinner ? [photo_repas_legacy] : []), photo_lieu2_legacy, photo_amour_legacy];
 
   const sections = [
     { title: "Bienvenue", content: <HomeSection /> },
@@ -114,114 +131,93 @@ const MainLayout = () => {
             >
               {/* Images section - hidden on mobile*/}
               {index == 0 && <>
-                <img 
-                  src={fresque_gauche} 
-                  alt="" 
-                  className="hidden md:block absolute top-6 -left-4 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={fresque_haut_droite} 
-                  alt="" 
-                  className="hidden md:block absolute top-6 -right-4 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={icone_feuille} 
-                  alt="" 
-                  className="hidden md:block absolute top-100 right-10 opacity-90 pointer-events-none z-1 rotate-12"
-                />
-                <img 
-                  src={icone_feuille} 
-                  alt="" 
-                  className="hidden md:block absolute top-120 right-30 opacity-90 pointer-events-none z-1 rotate-45"
-                />
-                <img 
-                  src={icone_feuille} 
-                  alt="" 
-                  className="hidden md:block absolute top-140  right-20 opacity-90 pointer-events-none z-1 -rotate-45"
-                />
-                <img 
-                  src={icone_quartier_orange} 
-                  alt="" 
-                  className="hidden md:block absolute top-16 left-30 opacity-90 pointer-events-none z-1 -rotate-90"
-                />
-                <img 
-                  src={icone_orange_ouverte} 
-                  alt="" 
-                  className="hidden md:block absolute top-130 left-20 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={icone_feuille} 
-                  alt="" 
-                  className="hidden 2xl:block absolute top-160 left-0 opacity-90 pointer-events-none z-1 rotate-70"
-                />
-                <img 
-                  src={icone_fleur} 
-                  alt="" 
-                  className="hidden 2xl:block absolute top-200 left-15 opacity-90 pointer-events-none z-1"
-                />
+                <picture className="hidden md:block absolute top-6 -left-4 opacity-90 pointer-events-none z-1">
+                  <source srcSet={fresque_gauche} type="image/webp" />
+                  <img src={fresque_gauche_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-6 -right-4 opacity-90 pointer-events-none z-1">
+                  <source srcSet={fresque_haut_droite} type="image/webp" />
+                  <img src={fresque_haut_droite_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-100 right-10 opacity-90 pointer-events-none z-1 rotate-12">
+                  <source srcSet={icone_feuille} type="image/webp" />
+                  <img src={icone_feuille_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-120 right-30 opacity-90 pointer-events-none z-1 rotate-45">
+                  <source srcSet={icone_feuille} type="image/webp" />
+                  <img src={icone_feuille_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-140  right-20 opacity-90 pointer-events-none z-1 -rotate-45">
+                  <source srcSet={icone_feuille} type="image/webp" />
+                  <img src={icone_feuille_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-16 left-30 opacity-90 pointer-events-none z-1 -rotate-90">
+                  <source srcSet={icone_quartier_orange} type="image/webp" />
+                  <img src={icone_quartier_orange_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-130 left-20 opacity-90 pointer-events-none z-1">
+                  <source srcSet={icone_orange_ouverte} type="image/webp" />
+                  <img src={icone_orange_ouverte_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden 2xl:block absolute top-160 left-0 opacity-90 pointer-events-none z-1 rotate-70">
+                  <source srcSet={icone_feuille} type="image/webp" />
+                  <img src={icone_feuille_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden 2xl:block absolute top-200 left-15 opacity-90 pointer-events-none z-1">
+                  <source srcSet={icone_fleur} type="image/webp" />
+                  <img src={icone_fleur_legacy} alt="" loading="lazy"/>
+                </picture>
               </>}
 
               {index == 1 && <>
-                <img 
-                  src={icone_orange_ouverte} 
-                  alt="" 
-                  className="hidden md:block absolute top-10 left-10 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={icone_quartier_orange} 
-                  alt="" 
-                  className="hidden md:block absolute top-25 left-25 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={fresque_gauche_2} 
-                  alt="" 
-                  className="hidden md:block absolute top-50 -left-4 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={icone_clementine} 
-                  alt="" 
-                  className="hidden md:block absolute bottom-25 left-25 opacity-90 pointer-events-none z-1 rotate-12"
-                />
-                <img 
-                  src={icone_citron} 
-                  alt="" 
-                  className="hidden md:block absolute bottom-35 left-15 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={icone_citron} 
-                  alt="" 
-                  className="hidden md:block absolute bottom-15 left-5 opacity-90 pointer-events-none z-1 rotate-45"
-                />
-                <img 
-                  src={fresque_droite} 
-                  alt="" 
-                  className="hidden md:block absolute top-0 -right-4 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={icone_feuille} 
-                  alt="" 
-                  className="hidden md:block absolute top-250 right-0 opacity-90 pointer-events-none z-1 -rotate-45"
-                />
-                <img 
-                  src={icone_feuille} 
-                  alt="" 
-                  className="hidden md:block absolute top-290 right-20 opacity-90 pointer-events-none z-1 rotate-45"
-                />
-                <img 
-                  src={icone_feuille} 
-                  alt="" 
-                  className="hidden md:block absolute top-320 right-15 opacity-90 pointer-events-none z-1 rotate-12"
-                />
-                <img 
-                  src={icone_fleur} 
-                  alt="" 
-                  className="hidden md:block absolute top-275 right-5 opacity-90 pointer-events-none z-1"
-                />
-                <img 
-                  src={icone_fleur} 
-                  alt="" 
-                  className="hidden md:block absolute top-300 right-2 opacity-90 pointer-events-none z-1 -rotate-70"
-                />
+                <picture className="hidden md:block absolute top-10 left-10 opacity-90 pointer-events-none z-1">
+                  <source srcSet={icone_orange_ouverte} type="image/webp" />
+                  <img src={icone_orange_ouverte_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-25 left-25 opacity-90 pointer-events-none z-1">
+                  <source srcSet={icone_quartier_orange} type="image/webp" />
+                  <img src={icone_quartier_orange_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-50 -left-4 opacity-90 pointer-events-none z-1">
+                  <source srcSet={fresque_gauche_2} type="image/webp" />
+                  <img src={fresque_gauche_2_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute bottom-25 left-25 opacity-90 pointer-events-none z-1 rotate-12">
+                  <source srcSet={icone_clementine} type="image/webp" />
+                  <img src={icone_clementine_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute bottom-35 left-15 opacity-90 pointer-events-none z-1">
+                  <source srcSet={icone_citron} type="image/webp" />
+                  <img src={icone_citron_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute bottom-15 left-5 opacity-90 pointer-events-none z-1 rotate-45">
+                  <source srcSet={icone_citron} type="image/webp" />
+                  <img src={icone_citron_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-0 -right-4 opacity-90 pointer-events-none z-1">
+                  <source srcSet={fresque_droite} type="image/webp" />
+                  <img src={fresque_droite_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-250 right-0 opacity-90 pointer-events-none z-1 -rotate-45">
+                  <source srcSet={icone_feuille} type="image/webp" />
+                  <img src={icone_feuille_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-290 right-20 opacity-90 pointer-events-none z-1 rotate-45">
+                  <source srcSet={icone_feuille} type="image/webp" />
+                  <img src={icone_feuille} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-320 right-15 opacity-90 pointer-events-none z-1 rotate-12">
+                  <source srcSet={icone_feuille} type="image/webp" />
+                  <img src={icone_feuille_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-275 right-5 opacity-90 pointer-events-none z-1">
+                  <source srcSet={icone_fleur} type="image/webp" />
+                  <img src={icone_fleur_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="hidden md:block absolute top-300 right-2 opacity-90 pointer-events-none z-1 -rotate-70">
+                  <source srcSet={icone_fleur} type="image/webp" />
+                  <img src={icone_fleur_legacy} alt="" loading="lazy"/>
+                </picture>
               </>}
 
               {/* Content */}
