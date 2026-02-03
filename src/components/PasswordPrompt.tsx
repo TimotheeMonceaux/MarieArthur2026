@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '../store/store'; 
 import { checkPassword } from '../store/slices/passwordSlice';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import lieux_illustres from '../assets/webp/lieux_illustres.webp';
 import lieux_illustres_legacy from '../assets/legacy/lieux_illustres.png';
 import fresque_haut from '../assets/webp/fresque_haut.webp';
@@ -26,8 +26,15 @@ function PasswordPrompt() {
       dispatch(checkPassword(inputValue ?? ''));
     };
 
+    // Hack for weird behaviour on mobile when the keyboard opens
+    const [viewHeight, setViewHeight] = useState('100dvh');
+    useEffect(() => {
+        const height = window.innerHeight;
+        setViewHeight(`${height}px`);
+    }, []);
+
     return (
-      <div className="relative min-h-dvh flex items-center justify-center bg-linear-to-br from-light-blue to-dresscode-blue-light p-4 overflow-hidden">
+      <div style={{ minHeight: viewHeight }} className="relative flex items-center justify-center bg-linear-to-br from-light-blue to-dresscode-blue-light p-4 overflow-hidden">
         <picture className="hidden md:block absolute top-0 left-0 w-2/10 opacity-80 pointer-events-none">
           <source srcSet={fresque_haut_2} type="image/webp" />
           <img src={fresque_haut_2_legacy} alt="" loading="lazy"/>
