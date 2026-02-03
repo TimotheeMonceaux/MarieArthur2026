@@ -30,6 +30,8 @@ import fresque_droite from '../assets/webp/fresque_droite.webp';
 import fresque_droite_legacy from '../assets/legacy/fresque_droite.png';
 import fresque_haut_droite from '../assets/webp/fresque_haut_droite.webp';
 import fresque_haut_droite_legacy from '../assets/legacy/fresque_haut_droite.png';
+import fresque_haut_droite_2 from '../assets/webp/fresque_haut_droite_2.webp';
+import fresque_haut_droite_2_legacy from '../assets/legacy/fresque_haut_droite_2.png';
 import icone_feuille from '../assets/webp/icone_feuille.webp';
 import icone_feuille_legacy from '../assets/legacy/icone_feuille.png';
 import icone_citron from '../assets/webp/icone_citron.webp';
@@ -141,8 +143,18 @@ const MainLayout = () => {
               ref={(el) => {sectionRefs.current[index] = el}}
               className="min-h-screen flex items-center justify-center p-3 md:p-12 relative overflow-hidden"
             >
-              {/* Images section - hidden on mobile*/}
+              {/* Decorations */}
               {index == 0 && <>
+                {/* Mobile only */}
+                <picture className="block md:hidden absolute top-14 left-0 opacity-90 pointer-events-none z-1 -scale-x-100">
+                  <source srcSet={fresque_haut_droite} type="image/webp" />
+                  <img src={fresque_haut_droite_legacy} alt="" loading="lazy"/>
+                </picture>
+                <picture className="block md:hidden absolute bottom-0 left-0 opacity-90 w-70 pointer-events-none z-1 -scale-x-100 -scale-y-100">
+                  <source srcSet={fresque_haut_droite_2} type="image/webp" />
+                  <img src={fresque_haut_droite_2_legacy} alt="" loading="lazy"/>
+                </picture>
+                {/* Desktop only */}
                 <picture className="hidden md:block absolute top-6 left-0 opacity-90 pointer-events-none z-1">
                   <source srcSet={fresque_gauche} type="image/webp" />
                   <img src={fresque_gauche_legacy} alt="" loading="lazy"/>
