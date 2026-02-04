@@ -1,18 +1,20 @@
 import React, { useRef, useState, useEffect } from 'react';
-import photo_mariearthur from '../assets/webp/photo_mariearthur.webp';
-import photo_mariearthur_legacy from '../assets/legacy/photo_mariearthur.jpg';
-import photo_eglise from '../assets/webp/photo_eglise.webp';
-import photo_eglise_legacy from '../assets/legacy/photo_eglise.jpg';
-import photo_lieu from '../assets/webp/photo_lieu.webp';
-import photo_lieu_legacy from '../assets/legacy/photo_lieu.jpg';
-import photo_exterieur from '../assets/webp/photo_exterieur.webp';
-import photo_exterieur_legacy from '../assets/legacy/photo_exterieur.jpg';
-import photo_repas from '../assets/webp/photo_repas.webp';
-import photo_repas_legacy from '../assets/legacy/photo_repas.jpg';
-import photo_lieu2 from '../assets/webp/photo_lieu2.webp';
-import photo_lieu2_legacy from '../assets/legacy/photo_lieu2.jpg';
-import photo_amour from '../assets/webp/photo_amour.webp';
-import photo_amour_legacy from '../assets/legacy/photo_amour.jpg';
+import photo_1 from '../assets/webp/photo_1.webp';
+import photo_1_legacy from '../assets/legacy/photo_1.jpeg';
+import photo_2 from '../assets/webp/photo_2.webp';
+import photo_2_legacy from '../assets/legacy/photo_2.jpeg';
+import photo_3 from '../assets/webp/photo_3.webp';
+import photo_3_legacy from '../assets/legacy/photo_3.jpeg';
+import photo_4 from '../assets/webp/photo_4.webp';
+import photo_4_legacy from '../assets/legacy/photo_4.jpeg';
+import photo_5 from '../assets/webp/photo_5.webp';
+import photo_5_legacy from '../assets/legacy/photo_5.jpeg';
+import photo_6 from '../assets/webp/photo_6.webp';
+import photo_6_legacy from '../assets/legacy/photo_6.jpeg';
+import photo_7 from '../assets/webp/photo_7.webp';
+import photo_7_legacy from '../assets/legacy/photo_7.jpeg';
+import photo_8 from '../assets/webp/photo_8.webp';
+import photo_8_legacy from '../assets/legacy/photo_8.jpeg';
 import HomeSection from './sections/HomeSection';
 import InfoSection from './sections/InfoSection';
 import FormSection from './sections/FormSection';
@@ -58,13 +60,13 @@ const MainLayout = () => {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const photos = [
-    {webp: photo_mariearthur, legacy: photo_mariearthur_legacy},
-    {webp: photo_eglise, legacy: photo_eglise_legacy},
-    {webp: photo_lieu, legacy: photo_lieu_legacy},
-    {webp: photo_exterieur, legacy: photo_exterieur_legacy},
-    ...(isInvitedToDinner ? [{webp: photo_repas, legacy: photo_repas_legacy}] : []), 
-    {webp: photo_lieu2, legacy: photo_lieu2_legacy},
-    {webp: photo_amour, legacy: photo_amour_legacy}
+    {webp: photo_1, legacy: photo_1_legacy, position: '40% center'},
+    {webp: photo_2, legacy: photo_2_legacy, position: 'center 25%'},
+    {webp: photo_3, legacy: photo_3_legacy},
+    {webp: photo_4, legacy: photo_4_legacy, position: '80% 25%'},
+    ...(isInvitedToDinner ? [{webp: photo_5, legacy: photo_5_legacy, position: 'center 20%'}] : []), 
+    {webp: photo_6, legacy: photo_6_legacy, position: 'center 25%'},
+    {webp: photo_7, legacy: photo_7_legacy}
   ];
 
   const sections = [
@@ -287,14 +289,25 @@ const MainLayout = () => {
                 className="parallax h-[50vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
                 style={{ 
                   '--bg-webp': `url(${photos[index].webp})`,
-                  '--bg-legacy': `url(${photos[index].legacy})` 
+                  '--bg-legacy': `url(${photos[index].legacy})`,
+                  backgroundPosition: `${photos[index].position || 'center center'}`
                 } as React.CSSProperties}
               />
             )}
           </React.Fragment>
         ))}
       </main>
-
+      <div className="w-full overflow-hidden flex justify-center">
+        <picture>
+          <source srcSet={photo_8} type="image/webp" />
+          <img 
+            src={photo_8_legacy} 
+            alt="Photo de fin" 
+            className="w-full md:w-[60%] h-auto block shadow-2xl mx-auto" 
+            loading="lazy"
+          />
+        </picture>
+      </div>
       {/* --- Footer --- */}
       <footer className="bg-dresscode-blue py-8 text-center text-white">
         <p className="font-sans">06 Juin 2026 • On a hâte de vous voir !</p>
