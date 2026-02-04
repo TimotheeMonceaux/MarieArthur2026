@@ -15,6 +15,8 @@ import photo_7 from '../assets/webp/photo_7.webp';
 import photo_7_legacy from '../assets/legacy/photo_7.jpeg';
 import photo_8 from '../assets/webp/photo_8.webp';
 import photo_8_legacy from '../assets/legacy/photo_8.jpeg';
+import photo_8_r90 from '../assets/webp/photo_8_r90.webp';
+import photo_8_r90_legacy from '../assets/legacy/photo_8_r90.jpeg';
 import HomeSection from './sections/HomeSection';
 import InfoSection from './sections/InfoSection';
 import FormSection from './sections/FormSection';
@@ -298,12 +300,19 @@ const MainLayout = () => {
         ))}
       </main>
       <div className="w-full overflow-hidden flex justify-center">
-        <picture>
+        <picture className="block md:hidden w-full h-auto shadow-2xl mx-auto">
           <source srcSet={photo_8} type="image/webp" />
           <img 
             src={photo_8_legacy} 
-            alt="Photo de fin" 
-            className="w-full md:w-[60%] h-auto block shadow-2xl mx-auto" 
+            alt="" 
+            loading="lazy"
+          />
+        </picture>
+        <picture className="hidden md:block w-full h-auto shadow-2xl mx-auto">
+          <source srcSet={photo_8_r90} type="image/webp" />
+          <img 
+            src={photo_8_r90_legacy} 
+            alt="" 
             loading="lazy"
           />
         </picture>
