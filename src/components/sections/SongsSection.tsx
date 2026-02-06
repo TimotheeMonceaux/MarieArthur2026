@@ -2,8 +2,8 @@ import { Mic2, Youtube, FileText } from 'lucide-react';
 
 const SongsSection = () => {
   // Liens à remplir (Google Doc ou Playlist YouTube)
-  const playlistUrl = "a"; 
-  const lyricsUrl = "a"; 
+  const playlistUrl = "https://www.youtube.com/playlist?list=PLa4_LvUQ8p7575mggJr2wlEff6kAu6GOV"; 
+  const lyricsUrl = "https://docs.google.com/document/d/1FebGG2zACZP6jYzq8fkITaQ7JEubIZnw-PDPn6RUXhI/edit?usp=drivesdk"; 
 
   return (
     <div className="space-y-10 p-4 md:p-8 max-w-3xl mx-auto text-center">
