@@ -1,12 +1,10 @@
-import { Mic2, Youtube, FileText } from 'lucide-react';
+import { Mic2, Youtube } from 'lucide-react';
 
 const SongsSection = () => {
-  // Liens à remplir (Google Doc ou Playlist YouTube)
-  const playlistUrl = "https://www.youtube.com/playlist?list=PLa4_LvUQ8p7575mggJr2wlEff6kAu6GOV"; 
-  const lyricsUrl = "https://docs.google.com/document/d/1FebGG2zACZP6jYzq8fkITaQ7JEubIZnw-PDPn6RUXhI/edit?usp=drivesdk"; 
+  const playlistUrl = "https://www.youtube.com/playlist?list=PLa4_LvUQ8p7575mggJr2wlEff6kAu6GOV";
 
   return (
-    <div className="space-y-10 p-4 md:p-8 max-w-3xl mx-auto text-center">
+    <div className="space-y-8 p-4 md:p-8 max-w-xl mx-auto text-center">
       
       {/* --- EN-TÊTE ET TEXTE D'ACCUEIL --- */}
       <section className="space-y-6">
@@ -25,10 +23,7 @@ const SongsSection = () => {
           </p>
         </div>
       </section>
-
-      {/* --- CARTES DE RESSOURCES --- */}
-      <div className="grid sm:grid-cols-2 gap-6">
-        
+      <div className="grid gap-6">
         {/* Playlist YouTube */}
         <div className="bg-off-white p-6 rounded-[2rem] border-2 border-dresscode-yellow/50 shadow-sm hover:shadow-md transition-shadow group">
           <div className="w-12 h-12 bg-dresscode-orange/20 text-dresscode-orange rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -45,30 +40,6 @@ const SongsSection = () => {
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-dresscode-yellow text-off-white rounded-full font-bold text-sm shadow-sm hover:bg-dresscode-yellow-light transition-colors"
             >
               Écouter sur YouTube
-            </a>
-          ) : (
-            <span className="inline-block px-4 py-2 bg-slate-100 text-slate-400 rounded-full text-xs font-bold uppercase tracking-widest">
-              Bientôt disponible
-            </span>
-          )}
-        </div>
-
-        {/* Livret / Google Doc */}
-        <div className="bg-off-white p-6 rounded-[2rem] border-2 border-dresscode-orange/50 shadow-sm hover:shadow-md transition-shadow group">
-          <div className="w-12 h-12 bg-dresscode-orange/10 text-dresscode-orange rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-            <FileText size={28} />
-          </div>
-          <h3 className="font-bold text-slate-800 mb-2">Les Paroles</h3>
-          <p className="text-sm text-slate-500 mb-6">Le livret de messe numérique pour suivre et chanter les textes.</p>
-          
-          {lyricsUrl ? (
-            <a 
-              href={lyricsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-dresscode-orange-dark text-off-white rounded-full font-bold text-sm shadow-sm hover:bg-dresscode-orange transition-colors"
-            >
-              Lire le livret
             </a>
           ) : (
             <span className="inline-block px-4 py-2 bg-slate-100 text-slate-400 rounded-full text-xs font-bold uppercase tracking-widest">
