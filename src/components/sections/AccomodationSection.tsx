@@ -11,34 +11,10 @@ const AccommodationSection = () => {
         </div>
         <h2 className="text-xl md:text-3xl font-bold text-dresscode-orange uppercase tracking-tight">Où dormir ?</h2>
         <p className="text-slate-700 leading-relaxed max-w-2xl mx-auto">
-          Pour ceux qui souhaiteraient dormir proche du lieu de réception, nous vous indiquons à titre d’information 
-          quelques hébergements que vous pouvez contacter afin d’y réserver une chambre. 
-          La grande majorité de ces logements se situent entre <span className="font-bold text-dresscode-orange font-sans">5 et 20 minutes</span> de voiture.
+          Il n'y aura <span className="font-bold text-dresscode-orange font-sans">pas de logements prévus sur place</span>. 
+          Pour ceux qui souhaiteraient dormir proches du lieu de réception, il y a de nombreux hôtels, Airbnb et 
+          chambre d'hôtes réservables en ligne et assez proches en voiture.
         </p>
-      </section>
-
-      {/* --- PRÉVENTION / SAM --- */}
-      <section className="bg-off-white rounded-2xl border-2 border-dresscode-orange-dark/20 overflow-hidden shadow-sm">
-        <div className="bg-dresscode-orange-dark/10 p-4 flex items-center gap-3 border-b border-dresscode-orange-dark/20">
-          <AlertTriangle className="text-dresscode-orange-dark" size={24} />
-          <h3 className="font-bold text-dresscode-orange-dark uppercase tracking-wider text-sm">Sécurité & Transports</h3>
-        </div>
-        <div className="p-6 space-y-4">
-          <p className="text-slate-700">
-            Il n’y aura pas de service de taxi pour vous ramener à vos hébergements et les contrôles de police 
-            sont fréquents dans la région.
-          </p>
-          <div className="flex items-start gap-4 p-4 bg-off-white-light rounded-xl">
-            <div className="bg-dresscode-green p-2 rounded-lg text-off-white">
-              <Car size={20} />
-            </div>
-            <p className="text-sm text-slate-600 leading-snug">
-              Nous vous invitons <span className="font-bold text-slate-900">fortement</span> à choisir un 
-              <span className="text-dresscode-green font-bold text-lg mx-1 italic underline decoration-dresscode-green/30">SAM</span> 
-              à l’avance qui pourra limiter sa consommation d’alcool et vous ramener en toute sérénité.
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* --- OPTION TENTE / DOMAINE --- */}
@@ -68,11 +44,29 @@ const AccommodationSection = () => {
         </div>
       </section>
 
-      {/* --- PLACEHOLDER POUR LISTE D'HÔTELS --- */}
-      <p className="text-center text-xs text-slate-400 italic">
-        (La liste détaillée des hôtels à proximité sera disponible prochainement)
-      </p>
-
+      {/* --- PRÉVENTION / SAM --- */}
+      <section className="bg-off-white rounded-2xl border-2 border-dresscode-orange-dark/20 overflow-hidden shadow-sm">
+        <div className="bg-dresscode-orange-dark/10 p-4 flex items-center gap-3 border-b border-dresscode-orange-dark/20">
+          <AlertTriangle className="text-dresscode-orange-dark" size={24} />
+          <h3 className="font-bold text-dresscode-orange-dark uppercase tracking-wider text-sm">Sécurité & Transports</h3>
+        </div>
+        <div className="p-6 space-y-4">
+          <p className="text-slate-700">
+            Il n’y aura pas de service de taxi pour vous ramener à vos hébergements et les contrôles de police 
+            sont fréquents dans la région.
+          </p>
+          <div className="flex items-start gap-4 p-4 bg-off-white-light rounded-xl">
+            <div className="bg-dresscode-green p-2 rounded-lg text-off-white">
+              <Car size={20} />
+            </div>
+            <p className="text-sm text-slate-600 leading-snug">
+              Nous vous invitons <span className="font-bold text-slate-900">fortement</span> à choisir un 
+              <span className="text-dresscode-green font-bold text-lg mx-1 italic underline decoration-dresscode-green/30">SAM</span> 
+              à l’avance qui pourra limiter sa consommation d’alcool et vous ramener en toute sérénité.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
