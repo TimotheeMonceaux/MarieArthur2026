@@ -2,8 +2,8 @@ import { Gift, Heart, ExternalLink, Sparkles } from 'lucide-react';
 
 const ListSection = () => {
   // À remplir dès que le lien est disponible
-  const listUrl = "https://millemercismariage.com/mariearthur2026"; // ex: "https://www.millesimes.com/ma-liste-marie-arthur"
-
+  const listUrl = "http://millemercismariage.com/mariearthur2026";
+  
   return (
     <div className="space-y-8 p-4 md:p-8 max-w-2xl mx-auto text-center">
       
