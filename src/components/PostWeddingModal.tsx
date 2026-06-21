@@ -34,7 +34,7 @@ const PostWeddingModal = ({ recipeFormUrl, onNavigateToPhotos }: PostWeddingModa
   return (
     /* Backdrop */
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center p-4 bg-dresscode-blue/60 backdrop-blur-sm transition-opacity duration-300 ${
+      className={`fixed inset-0 z-100 flex items-center justify-center p-4 bg-dresscode-blue/60 backdrop-blur-sm transition-opacity duration-300 ${
         isClosing ? 'opacity-0' : 'opacity-100'
       }`}
       onClick={handleClose}
@@ -66,7 +66,7 @@ const PostWeddingModal = ({ recipeFormUrl, onNavigateToPhotos }: PostWeddingModa
             />
           </picture>
           {/* Gradient fade into card body */}
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-off-white to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-off-white to-transparent" />
         </div>
 
         {/* Content */}
