@@ -25,6 +25,7 @@ import ListSection from './sections/ListSection';
 import PhotosSection from './sections/PhotosSection';
 import SongsSection from './sections/SongsSection';
 import QuestionsSection from './sections/QuestionsSection';
+import PostWeddingModal from './PostWeddingModal';
 import { useAppSelector } from '../store/store';
 import fresque_gauche from '../assets/webp/fresque_gauche.webp';
 import fresque_gauche_legacy from '../assets/legacy/fresque_gauche.png';
@@ -115,8 +116,14 @@ const MainLayout = () => {
     sectionRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const photosIndex = sections.findIndex(s => s.title === "Les photos");
+
   return (
     <div className="relative">
+      <PostWeddingModal
+        recipeFormUrl="https://docs.google.com/forms/d/1QsmOBofvymUUXOkmeuq8w1EIoEQVMiE1UrHWT_664cE/viewform?edit_requested=true"
+        onNavigateToPhotos={() => scrollToSection(photosIndex)}
+      />
       {/* --- Sticky Navigation Bar --- */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-off-white backdrop-blur-md border-b border-dresscode-orange/30 shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
