@@ -61,8 +61,9 @@ const GalleryCard = ({
 const PhotosSection = () => {
   // --- Liens à remplir après le mariage ---
   const charleneUrl = "";          // ← à compléter dès réception
-  const lucasUrl   = "https://lucashutinphotographie92.pixieset.com/marieandarthur/";
-  const photoboothUrl = "https://photos.app.goo.gl/S3WUMMFzRV7nrsYs8";
+  const lucasUrl = "https://lucashutinphotographie92.pixieset.com/marieandarthur/";
+  const photoboothUrl = "https://photos.app.goo.gl/p5PscR8p7DhtzKcw8";
+  const guestsUrl = "https://photos.app.goo.gl/S3WUMMFzRV7nrsYs8";
 
   const anyAvailable = charleneUrl || lucasUrl || photoboothUrl;
 
@@ -142,6 +143,11 @@ const PhotosSection = () => {
 
         </div>
       )}
+
+      <p className="text-slate-600 max-w-lg mx-auto">
+        Pour voir les photos prises par les invités, et partager les votres si vous le souhaitez, 
+        vous pouvez accéder à <a href={guestsUrl} target="_blank" className="text-dresscode-orange font-bold underline">l'album photo partagé des invités</a>.
+      </p>
     </div>
   );
 };
