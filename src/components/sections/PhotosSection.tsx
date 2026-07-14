@@ -1,4 +1,4 @@
-import { Camera, Image as ImageIcon, Sparkles, ExternalLink, Clapperboard, Heart, KeyRound, Lock } from 'lucide-react';
+import { Camera, Image as ImageIcon, Sparkles, ExternalLink, Clapperboard, Heart, KeyRound, Lock, Lightbulb } from 'lucide-react';
 
 interface GalleryCardProps {
   icon: React.ReactNode;
@@ -6,6 +6,7 @@ interface GalleryCardProps {
   subtitle: string;
   url: string;
   instructions?: string;
+  tips?: string;
   buttonLabel: string;
   pendingLabel: string;
   accentClass: string;
@@ -18,6 +19,7 @@ const GalleryCard = ({
   subtitle,
   url,
   instructions,
+  tips,
   buttonLabel,
   pendingLabel,
   accentClass,
@@ -35,6 +37,14 @@ const GalleryCard = ({
       <div className="flex items-center gap-2 bg-dresscode-yellow/20 border border-dresscode-yellow/40 rounded-xl px-4 py-2 mb-5 text-sm text-slate-600">
         <KeyRound size={14} className="text-dresscode-orange shrink-0" />
         <span>{instructions}</span>
+      </div>
+    )}
+
+    {/* Tips badge */}
+    {tips && (
+      <div className="flex items-center gap-2 text-slate-600 bg-dresscode-orange/20 border border-dresscode-orange/40 rounded-xl px-4 py-2 mb-5 text-sm">
+        <Lightbulb size={14} className="text-dresscode-orange shrink-0" />
+        <i>{tips}</i>
       </div>
     )}
 
@@ -60,7 +70,7 @@ const GalleryCard = ({
 
 const PhotosSection = () => {
   // --- Liens à remplir après le mariage ---
-  const charleneUrl = "";          // ← à compléter dès réception
+  const charleneUrl = "https://charlenedrouelphotographe.pic-time.com/Z5ibxg660rqqg";
   const lucasUrl = "https://lucashutinphotographie92.pixieset.com/marieandarthur/";
   const photoboothUrl = "https://photos.app.goo.gl/p5PscR8p7DhtzKcw8";
   const guestsUrl = "https://photos.app.goo.gl/S3WUMMFzRV7nrsYs8";
@@ -110,6 +120,7 @@ const PhotosSection = () => {
             title="Les photos de Charlène"
             subtitle="La cérémonie et les portraits."
             url={charleneUrl}
+            tips="Téléchargez les photos pour retirer la signature de la photographe"
             buttonLabel="Voir la galerie"
             pendingLabel="Bientôt disponible"
             accentClass="border-dresscode-orange shadow-dresscode-orange/30 hover:shadow-dresscode-orange/50"
